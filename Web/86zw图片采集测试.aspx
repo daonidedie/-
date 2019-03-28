@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="86zw图片采集测试.aspx.cs" Inherits="_86zw图片采集测试" %>

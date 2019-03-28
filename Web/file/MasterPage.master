@@ -1,0 +1,552 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="file_MasterPage" %>
+<%@ Import Namespace=" Skybot.Cache" %>
+<%@ Import Namespace=" Skybot.Tong.CodeCharSet" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <title><%= string.Join(",", list.Select(p => p.书名).ToArray())%>,最新章节-听雨阁文学</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta name="baidu-site-verification" content="vkPuafOONSwVmWV6" />
+        <meta name="keywords" content="武侠,言情,网游,玄幻,奇幻,免费小说" />
+        <meta name="keywords" content="<%= string.Join(",", list.Select(p => p.书名).ToArray())%>" />
+        <meta name="description" content="在线小说阅读网，好看的在线手机小说阅读，wap小说下载，移动书库提供言情小说，玄幻小说，武侠小说，军事小说，科幻小说,恐怖小说,灵异小说,热门小说，小说最新章节免费阅读。" />
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="/file/default.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="book_header" class="header">
+            <div id="book_topimg">
+                <div id="book_topbg">
+                    <div id="book_logo">
+                    </div>
+                    <div id="baidu_pro">
+                    </div>
+                </div>
+            </div>
+            <div id="book_menubg">
+                <div id="book_menu">
+                    <ul>
+                        <li><a href="/">网站首页</a></li>
+                        <li class="fenge"></li>
+                        <asp:Repeater ID="Nav" runat="server">
+                            <ItemTemplate>
+                                <%if (!IsCresteHTMLPage)
+                                  { %>
+                                <li><a href="/Site/BookList.aspx?lx=<%#Eval("ID") %>">
+                                    <%#Eval("分类标识") %></a></li>
+                                <%}
+                                  else
+                                  { %>
+                                <li><a href="/Book/<%#Eval("分类标识").ToString().ToPingYing() %>/<%#Eval("ID") %>/index.aspx">
+                                    <%#Eval("分类标识") %></a></li>
+                                <%} %>
+                                <li class="fenge"></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <li>
+                            <%if(System.Configuration.ConfigurationManager.AppSettings["启用Qlili获取数据"] == "0"){ %>
+                            <a href="/Site/BookList.aspx">排行榜</a>
+                            <%}else{ %>
+                            <a href="/Site/SuSuCong/SuSuCongBookList.aspx">排行榜</a>
+                            <%} %>
+
+                        </li>
+                        <li class="fenge"></li>
+                        <li><a href="/Book/<%="全本小说".ToPingYing() %>/-1/index.aspx">全本小说</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="search">
+                <div class="w960 center">
+                    <span class="search_l"></span><span class="search_r"></span>
+                    <form name="formsearch" action="/Site/SearchProxy.ashx">
+                        <div class="form">
+                            <h4>搜索</h4>
+                            <input id="keyword" class="search-keyword" name="keyword" type="text" /><select id="t"
+                                class="search-option" name="t"><option selected="1" value="1">仅搜索书名</option>
+                                <option value="2">仅搜索作者</option>
+                            </select>
+                            <button class="search-submit" type="submit">
+                                搜索</button>
+                        </div>
+                    </form>
+                    <!-- /form -->
+                    <div class="tags">
+                        <h4>热门标签</h4>
+                    </div>
+                    <div class="sitemap">
+                        <a onclick="javascript:window.external.AddFavorite('http://www.qlili.com', '听雨阁文学·锦衣夜行、校花的贴身高手')"  href="http://www.qlili.com/#">加入收藏</a>
+                        <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.qlili.com');"  href="http://www.qlili.com/#">设为首页</a>
+                        <a href="/Site/ClassType.aspx" target="_blank">所有类别</a>
+                       <a href="/file/SiteMap.htm" target="_blank">最新更新</a>
+                         <a href="/file/SiteMaps/1.html" target="_blank">网站地图</a>
+                    </div>
+                    <!-- /tags -->
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 5px;">
+        </div>
+        <div style="margin: 0px auto; border: 1px solid rgb(197, 197, 197); width: 888px; text-align: left;">
+        </div>
+        <div style="margin-bottom: 5px;">
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div id="main">
+                <div id="book_main">
+                    <div class="book_news">
+                        <div class="book_news_title title">
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="book_news_style">
+
+
+
+                            <div class="book_news_style_form">
+                                <div class="book_news_style_img">
+                                    <a title="异世药神" href="/docs/HTML/XuanHuanMoFa/YiShiLueShen/index.aspx" target="_blank">
+                                        <img border="0" alt="异世药神" src="http://image.cmfu.com/books/1887208/1887208.jpg" width="118" height="150" /></a>
+                                </div>
+                                <div class="book_news_style_text">
+                                    <h1>
+                                        <a href="/docs/HTML/XuanHuanMoFa/YiShiLueShen/index.aspx" target="_blank">异世药神 </a>
+                                    </h1>
+                                    <h2>作者：<a title="暗魔师作品集" href="#">暗魔师</a></h2>
+                                    <h3>大陆公认第一强者，斯特恩大陆唯一一名灵药圣师，大陆最出色的天才杰森，在一次实验意外中，进入时空乱流，回到了三千年前的...</h3>
+                                </div>
+                            </div>
+
+
+
+                            <div class="book_news_style_form">
+                                <div class="book_news_style_img">
+                                    <a title="超级兵王" href="/docs/HTML/DouFuYanQing/ChaoJiBingWang/index.aspx" target="_blank">
+                                        <img border="0" alt="超级兵王" src="http://www.xkzw.org/BookFiles/BookImages/38289s.jpg" width="118" height="150" /></a>
+                                </div>
+                                <div class="book_news_style_text">
+                                    <h1>
+                                        <a href="/docs/HTML/DouFuYanQing/ChaoJiBingWang/index.aspx" target="_blank">超级兵王 </a>
+                                    </h1>
+                                    <h2>作者：<a title="明朝无酒作品集" href="#">明朝无酒</a></h2>
+                                    <h3></h3>
+                                </div>
+                            </div>
+
+
+
+                            <div class="book_news_style_form">
+                                <div class="book_news_style_img">
+                                    <a title="长生不死" href="/docs/HTML/WuXiaXian/ChangShengBuSi/index.aspx" target="_blank">
+                                        <img border="0" alt="长生不死" src="http://www.86zw.com/DownFiles/Book/BookImg/32/32495.jpg" width="118" height="150" /></a>
+                                </div>
+                                <div class="book_news_style_text">
+                                    <h1>
+                                        <a href="/docs/HTML/WuXiaXian/ChangShengBuSi/index.aspx" target="_blank">长生不死 </a>
+                                    </h1>
+                                    <h2>作者：<a title="观棋作品集" href="#">观棋</a></h2>
+                                    <h3>绝世凶人，老谋深算，为求长生，图谋天下。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 二十五岁来到这...</h3>
+                                </div>
+                            </div>
+
+
+
+                            <div class="book_news_style_form">
+                                <div class="book_news_style_img">
+                                    <a title="仙府之缘" href="/docs/HTML/AiHuanXiuZhen/XianFuZhiYuan/index.aspx" target="_blank">
+                                        <img border="0" alt="仙府之缘" src="http://www.xkzw.org/BookFiles/BookImages/2236900.jpg" width="118" height="150" /></a>
+                                </div>
+                                <div class="book_news_style_text">
+                                    <h1>
+                                        <a href="/docs/HTML/AiHuanXiuZhen/XianFuZhiYuan/index.aspx" target="_blank">仙府之缘 </a>
+                                    </h1>
+                                    <h2>作者：<a title="百里玺 作品集" href="#">百里玺 </a></h2>
+                                    <h3>叶晨是武国一名平民少年，无意间得到一副《仙府》古画卷轴，从此踏上修仙之路。这座神奇的仙府内，有一头小青狐，一座木屋，...</h3>
+                                </div>
+                            </div>
+
+
+
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listbox">
+                        <dl class="tbox">
+                            <dt><strong>玄幻奇幻小说</strong></dt>
+                            <dd>
+                                <ul class="d1 ico3">
+
+
+                                    <li>
+                                        <span class="date">2012-08-26</span>
+                                        《<a title="遮天" href="/docs/HTML/WuXiaXian/ZheTian/index.aspx" target="_blank">遮天</a>》 
+                                    <a title="1328章 欺" href="/docs/HTML/WuXiaXian/ZheTian/1249249.html" target="_blank">1328章 欺 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-26</span>
+                                        《<a title="神印王座" href="/docs/HTML/YiJieDaLiu/ShenYiWangZuo/index.aspx" target="_blank">神印王座</a>》 
+                                    <a title="第235章 跳动的永恒之心（中）-" href="/docs/HTML/YiJieDaLiu/ShenYiWangZuo/1249247.html" target="_blank">第235章 跳动的永恒之... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-26</span>
+                                        《<a title="傲世九重天" href="/docs/HTML/XuanHuanMoFa/AoShiJiuChongTian/index.aspx" target="_blank">傲世九重天</a>》 
+                                    <a title="211章真相【第七更！】" href="/docs/HTML/XuanHuanMoFa/AoShiJiuChongTian/1249246.html" target="_blank">211章真相【第七更！】 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-26</span>
+                                        《<a title="最终进化" href="/docs/HTML/KeHuanXiaoShui/CuoZhongJinHua/index.aspx" target="_blank">最终进化</a>》 
+                                    <a title="    第3章 原来如此" href="/docs/HTML/KeHuanXiaoShui/CuoZhongJinHua/1249245.html" target="_blank">第3章 原来如此 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="圣王" href="/docs/HTML/DongFangXuanHuan/KuWang/index.aspx" target="_blank">圣王</a>》 
+                                    <a title="566章 巨大收获" href="/docs/HTML/DongFangXuanHuan/KuWang/1249237.html" target="_blank">566章 巨大收获 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="华山仙门" href="/docs/HTML/WuXiaXian/HuaShanXianMen/index.aspx" target="_blank">华山仙门</a>》 
+                                    <a title="1128章 永恒之门中等爆发！" href="/docs/HTML/WuXiaXian/HuaShanXianMen/1248854.html" target="_blank">1128章 永恒之门中等... </a>
+                                    </li>
+
+
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="rbox">
+                            <dt><strong>武侠仙侠小说</strong></dt>
+                            <dd>
+                                <ul class="d1 ico3">
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="凡人修仙传" href="/docs/HTML/WuXiaXian/FanRenXiuXianChuan/index.aspx" target="_blank">凡人修仙传</a>》 
+                                    <a title="2167七章 木族大战（十一）" href="/docs/HTML/WuXiaXian/FanRenXiuXianChuan/1248850.html" target="_blank">2167七章 木族大战（... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="将夜" href="/docs/HTML/XuanHuanMoFa/JiangYe/index.aspx" target="_blank">将夜</a>》 
+                                    <a title="290章 摇篮曲" href="/docs/HTML/XuanHuanMoFa/JiangYe/1248838.html" target="_blank">290章 摇篮曲 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="校花的贴身高手" href="/docs/HTML/DouFuYanQing/JiaoHuaDeTieJuanGaoShou/index.aspx" target="_blank">校花的贴身高手</a>》 
+                                    <a title="第1774章 奇怪的武技" href="/docs/HTML/DouFuYanQing/JiaoHuaDeTieJuanGaoShou/1248837.html" target="_blank">第1774章 奇怪的武技 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="剑道独尊" href="/docs/HTML/XuanHuanMoFa/JianDaoDuZun/index.aspx" target="_blank">剑道独尊</a>》 
+                                    <a title="698章 人生中第一次洗礼（第二更） " href="/docs/HTML/XuanHuanMoFa/JianDaoDuZun/1248829.html" target="_blank">698章 人生中第一次洗... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="天才医生" href="/docs/HTML/DouFuYanQing/TianCaiYiSheng/index.aspx" target="_blank">天才医生</a>》 
+                                    <a title="第1512章、扬家的取舍！" href="/docs/HTML/DouFuYanQing/TianCaiYiSheng/1248824.html" target="_blank">第1512章、扬家的取舍... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="修真世界" href="/docs/HTML/WuXiaXian/XiuZhenShiJie/index.aspx" target="_blank">修真世界</a>》 
+                                    <a title="720节 心惊胆战" href="/docs/HTML/WuXiaXian/XiuZhenShiJie/1248823.html" target="_blank">720节 心惊胆战 </a>
+                                    </li>
+
+
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="tbox">
+                            <dt><strong>都市言情小说</strong></dt>
+                            <dd>
+                                <ul class="d1 ico3">
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="官术" href="/docs/HTML/DouFuYanQing/GuanShu/index.aspx" target="_blank">官术</a>》 
+                                    <a title="2158章 图纸和秘密" href="/docs/HTML/DouFuYanQing/GuanShu/1248822.html" target="_blank">2158章 图纸和秘密 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="官家" href="/docs/HTML/DouFuYanQing/GuanJia/index.aspx" target="_blank">官家</a>》 
+                                    <a title="    第1245章省长视察" href="/docs/HTML/DouFuYanQing/GuanJia/1248820.html" target="_blank">第1245章省长... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="独步天下" href="/docs/HTML/WuXiaXian/DuBuTianXia/index.aspx" target="_blank">独步天下</a>》 
+                                    <a title="918 世界花（第三更爆发，求月票订阅！） " href="/docs/HTML/WuXiaXian/DuBuTianXia/1248818.html" target="_blank">918 世界花（第三更爆... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="都市少帅" href="/docs/HTML/XuanHuanMoFa/DouFuShaoShuai/index.aspx" target="_blank">都市少帅</a>》 
+                                    <a title="第2571章 出事" href="/docs/HTML/XuanHuanMoFa/DouFuShaoShuai/1248813.html" target="_blank">第2571章 出事 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="网游之邪龙逆天" href="/docs/HTML/WangLiuDongMan/WangLiuZhiXieLongNiTian/index.aspx" target="_blank">网游之邪龙逆天</a>》 
+                                    <a title=" 第1211章 超·圣灭！" href="/docs/HTML/WangLiuDongMan/WangLiuZhiXieLongNiTian/1248807.html" target="_blank">第1211章 超·圣灭... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="官仙" href="/docs/HTML/DouFuYanQing/GuanXian/index.aspx" target="_blank">官仙</a>》 
+                                    <a title=" 3416 - 3417" href="/docs/HTML/DouFuYanQing/GuanXian/1248806.html" target="_blank">3416 - 3417 </a>
+                                    </li>
+
+
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="rbox">
+                            <dt><strong>历史军事小说</strong></dt>
+                            <dd>
+                                <ul class="d1 ico3">
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="全职高手" href="/docs/HTML/JiTaLeiXing/QuanZhiGaoShou/index.aspx" target="_blank">全职高手</a>》 
+                                    <a title="934章 手速" href="/docs/HTML/JiTaLeiXing/QuanZhiGaoShou/1248805.html" target="_blank">934章 手速 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="唐门高手在异世" href="/docs/HTML/XuanHuanMoFa/TangMenGaoShouZaiYiShi/index.aspx" target="_blank">唐门高手在异世</a>》 
+                                    <a title="第1159章 自废功力 " href="/docs/HTML/XuanHuanMoFa/TangMenGaoShouZaiYiShi/1248803.html" target="_blank">第1159章 自废功力  </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-25</span>
+                                        《<a title="异界全职业大师" href="/docs/HTML/XuanHuanMoFa/YiJieQuanZhiYeDaShi/index.aspx" target="_blank">异界全职业大师</a>》 
+                                    <a title="第1140章 石板" href="/docs/HTML/XuanHuanMoFa/YiJieQuanZhiYeDaShi/1248801.html" target="_blank">第1140章 石板 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-24</span>
+                                        《<a title="很纯很暧昧" href="/docs/HTML/DouFuYanQing/HenChunAiMei/index.aspx" target="_blank">很纯很暧昧</a>》 
+                                    <a title="  第2180章 t12七夕特别章2" href="/docs/HTML/DouFuYanQing/HenChunAiMei/1243747.html" target="_blank">第2180章 t12... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-23</span>
+                                        《<a title="超级医生" href="/docs/HTML/DouFuYanQing/ChaoJiYiSheng/index.aspx" target="_blank">超级医生</a>》 
+                                    <a title="    第1215章 地球领主（大结局）" href="/docs/HTML/DouFuYanQing/ChaoJiYiSheng/1243053.html" target="_blank">第1215章 地... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-15</span>
+                                        《<a title="明末风暴" href="/docs/HTML/LiangSongYuanMeng/MengMoFengBao/index.aspx" target="_blank">明末风暴</a>》 
+                                    <a title="248、南海忽起阋墙风（六）" href="/docs/HTML/LiangSongYuanMeng/MengMoFengBao/1191873.html" target="_blank">248、南海忽起阋墙风（... </a>
+                                    </li>
+
+
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="tbox">
+                            <dt><strong>科幻灵异小说</strong></dt>
+                            <dd>
+                                <ul class="d1 ico3">
+
+
+                                    <li>
+                                        <span class="date">2012-08-15</span>
+                                        《<a title="重生音乐传奇" href="/docs/HTML/YuLeMengXing/ChongShengYinLeChuanAi/index.aspx" target="_blank">重生音乐传奇</a>》 
+                                    <a title="    第245章 意外遇见" href="/docs/HTML/YuLeMengXing/ChongShengYinLeChuanAi/1191711.html" target="_blank">第245章 意外... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-15</span>
+                                        《<a title="官居一品" href="/docs/HTML/JiTaLeiXing/GuanJiYiPin/index.aspx" target="_blank">官居一品</a>》 
+                                    <a title=" 曲终人不散，江上数峰青（后记之二）（上）+（下）" href="/docs/HTML/JiTaLeiXing/GuanJiYiPin/1191579.html" target="_blank">曲终人不散，江上数峰青... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-15</span>
+                                        《<a title="穿越之超能英雄" href="/docs/HTML/JinHuaBianYi/ChuanHuoZhiChaoNaiYangXiong/index.aspx" target="_blank">穿越之超能英雄</a>》 
+                                    <a title="第一百四十六章 兑换源力" href="/docs/HTML/JinHuaBianYi/ChuanHuoZhiChaoNaiYangXiong/1191578.html" target="_blank">第一百四十六章 兑换源力 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-15</span>
+                                        《<a title="重生鉴定师" href="/docs/HTML/DouFuChongSheng/ChongShengJianDingShi/index.aspx" target="_blank">重生鉴定师</a>》 
+                                    <a title="    第0234章你准备好了吗" href="/docs/HTML/DouFuChongSheng/ChongShengJianDingShi/1191551.html" target="_blank">第0234章你准... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-15</span>
+                                        《<a title="仙府之缘" href="/docs/HTML/AiHuanXiuZhen/XianFuZhiYuan/index.aspx" target="_blank">仙府之缘</a>》 
+                                    <a title="    228  出手" href="/docs/HTML/AiHuanXiuZhen/XianFuZhiYuan/1191431.html" target="_blank">228  出手 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-14</span>
+                                        《<a title="异世药神" href="/docs/HTML/XuanHuanMoFa/YiShiLueShen/index.aspx" target="_blank">异世药神</a>》 
+                                    <a title="    第1268章 战上位灵神" href="/docs/HTML/XuanHuanMoFa/YiShiLueShen/1190706.html" target="_blank">第1268章 战... </a>
+                                    </li>
+
+
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="rbox">
+                            <dt><strong>网游竞技小说</strong></dt>
+                            <dd>
+                                <ul class="d1 ico3">
+
+
+                                    <li>
+                                        <span class="date">2012-08-14</span>
+                                        《<a title="官神" href="/docs/HTML/DouFuYanQing/GuanShen/index.aspx" target="_blank">官神</a>》 
+                                    <a title="    后记之唐天云" href="/docs/HTML/DouFuYanQing/GuanShen/1189726.html" target="_blank">后记之唐天云 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-08-14</span>
+                                        《<a title="老子是癞蛤蟆" href="/docs/HTML/DouFuYanQing/LaoZiShiLaGeMa/index.aspx" target="_blank">老子是癞蛤蟆</a>》 
+                                    <a title="第60章 那年那天，这年这天（大结局）" href="/docs/HTML/DouFuYanQing/LaoZiShiLaGeMa/1189618.html" target="_blank">第60章 那年那天，这年... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-06-28</span>
+                                        《<a title="召唤万岁" href="/docs/HTML/XuanHuanMoFa/ShaoHuanMoSui/index.aspx" target="_blank">召唤万岁</a>》 
+                                    <a title="第一千一百零九章：【先把生米煮成熟饭！】" href="/docs/HTML/XuanHuanMoFa/ShaoHuanMoSui/1057762.html" target="_blank">第一千一百零九章：【先把... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-06-10</span>
+                                        《<a title="法控天下" href="/docs/HTML/XuNiWangLiu/FaKongTianXia/index.aspx" target="_blank">法控天下</a>》 
+                                    <a title=" 第一百四十三章 投奔" href="/docs/HTML/XuNiWangLiu/FaKongTianXia/1040928.html" target="_blank">第一百四十三章 投奔 </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-06-06</span>
+                                        《<a title="大替身时代" href="/docs/HTML/XingJiZhanZheng/DaTiJuanShiDai/index.aspx" target="_blank">大替身时代</a>》 
+                                    <a title="一百二十九章 墨门的踪迹（文)" href="/docs/HTML/XingJiZhanZheng/DaTiJuanShiDai/1040621.html" target="_blank">一百二十九章 墨门的踪迹... </a>
+                                    </li>
+
+
+                                    <li>
+                                        <span class="date">2012-06-06</span>
+                                        《<a title="匡扶后周" href="/docs/HTML/WuDaiShiGuo/KuangFuHouZhou/index.aspx" target="_blank">匡扶后周</a>》 
+                                    <a title="254谁为皇帝（6）" href="/docs/HTML/WuDaiShiGuo/KuangFuHouZhou/1040487.html" target="_blank">254谁为皇帝（6） </a>
+                                    </li>
+
+
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </asp:ContentPlaceHolder>
+        <div class="flink w890 center clear">
+            <dl class="linkbox">
+                <dt><strong>友情链接：</strong></dt>
+                <dd>
+                    <ul class="f5">
+                        <%--                        <li><a href="http://www.qlili.com/xkzw11117/" target="_blank">天圣</a></li>
+                        <li><a href="http://www.qlili.com/xkzw10910/" target="_blank">大道修行者</a></li>
+                        <li><a href="http://www.hwafa.com/" target="_blank">天才相师</a></li>
+                        <li><a href="http://www.qlili.com/xkzw10909/" target="_blank">红色仕途</a></li>
+                        <li><a href="http://www.qlili.com/xkzw10810/" target="_blank">仙河风暴</a></li>
+                        <li><a href="http://www.qlili.com/xkzw9858/" target="_blank">洪荒之太上剑圣</a></li>
+                        <li><a href="http://www.qlili.com/xkzw9794/" target="_blank">奸臣</a></li>
+                        <li><a href="http://www.qlili.com/xkzw10267/" target="_blank">雄霸蛮荒</a></li>
+                        <li><a href="http://www.qlili.com/xkzw9815/" target="_blank">一剑凌尘</a></li>
+                        --%>
+                        <li><a href="http://www.niaoyan.net/" target="_blank">神印王座最新章节</a></li>
+                        <li><a href="http://www.6yzw.com/" target="_blank">言情小说</a></li>
+                        <li><a href="http://www.d5wx.com/" target="_blank">裁决</a></li>
+                        <li><a href="http://www.llwx.net/" target="_blank">将夜</a></li>
+                        <li><a href="http://www.35xs.com/" target="_blank">将夜</a></li>
+                        <li><a href="http://www.niubb.net/" target="_blank">牛bb小说阅读网</a></li>
+                        <li><a href="http://www.juexiang.com/" target="_blank">心情日志</a></li>
+                        <li><a href="http://www.sj131.com/" target="_blank">穿越小说排行榜</a></li>
+                        <li><a href="http://www.htzw.net/" target="_blank">宋时行</a></li>
+                        <li><a href="http://www.bookzx.net/" target="_blank">小说者</a></li>
+                        <li><a href="http://www.d2zw.com/" target="_blank">吞噬星空最新章节列表</a></li>
+                        <li><a href="http://www.hxsk.net/" target="_blank">遮天</a></li>
+                        <li><a href="http://www.xs8.com.cn/" target="_blank">言情小说吧</a></li>
+                        <li><a href="http://www.suimeng.com/" target="_blank">神印王座</a></li>
+                        <li><a href="http://www.51zw.net/" target="_blank">都市言情小说</a></li>
+                        <li><a href="http://www.21zw.net/" target="_blank">21中文网</a></li>
+                        <li><a href="http://www.yueshuba.com/" target="_blank">阅书吧</a></li>
+                        <li><a href="http://www.kewaishu.net/" target="_blank">课外书阅读</a></li>
+                        <li><a href="http://www.hqread.com/" target="_blank">虹桥书吧</a></li>
+                        <li><a href="http://www.93wx.com/" target="_blank">神印王座</a></li>
+                        <li><a href="http://www.92wx.org/" target="_blank">就爱文学</a></li>
+                        <li><a href="http://www.tyxs.com/" target="_blank">天元小说</a></li>
+                        <li><a href="http://www.114zw.com/" target="_blank">仙府之缘</a></li>
+                        <li><a href="http://www.baidu.com" target="_blank">百度</a></li>
+                    <li><a href="http://www.hao123.com/" target="_blank">网址之家</a></li>
+                    <li><a href="http://baike.baidu.com/" target="_blank">百度百科</a></li>
+                    <li><a href="http://app.baidu.com/" target="_blank">百度应用</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="footer w890 center mt1 clear">
+            <p class="copyright">
+                <!-- 百度统计的代码,你们为什么要把百度统计的代码看成挂马? -->
+                <script type="text/javascript">
+                    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0be493a74b9bb5dccd847270f853c20b' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+
+            </p>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>

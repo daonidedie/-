@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AuthorCheckYes.aspx.cs" Inherits="Admin_Process_AuthorCheckYes" %>

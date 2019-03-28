@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Web/App_Data/TygDoc1.ndf
+/Web/App_Data/TygDoc.dat
+/Web/App_Data/TycLXDoc.dat
+/Web/App_Data/听语阁文学数据库.rar

@@ -1,0 +1,25 @@
+﻿<Window x:Class="生成应用程序.MainWindowFTP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="听语阁文学生成应用程序" Height="370" Width="490">
+    <Grid>
+        <Button Content="开始生成数据" Height="23" HorizontalAlignment="Left" Margin="180,61,0,0" Name="button1" VerticalAlignment="Top" Width="99" Click="button1_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="54,61,0,0" Name="stat" VerticalAlignment="Top" Width="120" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,61,0,0" Name="textBlock1" Text="总进度" VerticalAlignment="Top" />
+        <ListBox ItemsSource="{Binding}" Margin="0,109,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="书名"/>
+                        <TextBlock Text="{Binding 书名}"/>
+                        <TextBlock Text="状态"/>
+                        <TextBlock Text="{Binding 状态}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="生成最新" Height="23" HorizontalAlignment="Left" Margin="180,12,0,0" Name="button2" VerticalAlignment="Top" Width="119" Click="button2_Click" />
+        <Button Content="生成站点地图索引文件" Height="23" HorizontalAlignment="Left" Margin="297,61,0,0" Name="button3" VerticalAlignment="Top" Width="140" Click="button3_Click" />
+        <Button x:Name="createSitemap" Content="生成网站地图" HorizontalAlignment="Left" Margin="315,12,0,0" VerticalAlignment="Top" Width="93" Click="createSitemap_Click" Height="23"/>
+    </Grid>
+</Window>

@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TygModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TygModelStoreContainer">
+          <EntitySet Name="分类表" EntityType="TygModel.Store.分类表" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="书名表" EntityType="TygModel.Store.书名表" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="文章表" EntityType="TygModel.Store.文章表" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_书名表_分类表" Association="TygModel.Store.FK_书名表_分类表">
+            <End Role="分类表" EntitySet="分类表" />
+            <End Role="书名表" EntitySet="书名表" />
+          </AssociationSet>
+          <AssociationSet Name="FK_文章表_书名表" Association="TygModel.Store.FK_文章表_书名表">
+            <End Role="书名表" EntitySet="书名表" />
+            <End Role="文章表" EntitySet="文章表" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="分类表">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="分类标识" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="分类名称" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="通用分类" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="分类说明" Type="nvarchar" Nullable="false" MaxLength="3000" />
+          <Property Name="分类标识" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="通用分类1" Type="nvarchar" MaxLength="50" />
+          <Property Name="备注" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="书名表">
+          <Key>
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="书名" />
+            <PropertyRef Name="分类标识" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="书名" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="分类标识" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="分类表ID" Type="decimal" Nullable="false" />
+          <Property Name="说明" Type="nvarchar" Nullable="false" />
+          <Property Name="作者名称" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="创建时间" Type="datetime" Nullable="false" />
+          <Property Name="配图" Type="nvarchar" MaxLength="500" />
+          <Property Name="周点击" Type="decimal" Nullable="false" />
+          <Property Name="总点击" Type="decimal" Nullable="false" />
+          <Property Name="周鲜花" Type="decimal" Nullable="false" />
+          <Property Name="总鲜花" Type="decimal" Nullable="false" />
+          <Property Name="免费" Type="bit" Nullable="false" />
+          <Property Name="完本" Type="bit" Nullable="false" />
+          <Property Name="最后更新时间" Type="datetime" />
+          <Property Name="最新章节" Type="nvarchar" MaxLength="50" />
+          <Property Name="采集用的URL1" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL2" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL3" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL4" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL5" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL6" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL7" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL8" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL9" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL10" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="文章表">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="书名" />
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="分类标识" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="书名" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="GUID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="分类名称" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="分类标识" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="章节名" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="内容" Type="ntext" Nullable="false" />
+          <Property Name="总访问次数" Type="decimal" />
+          <Property Name="最后访问时间" Type="datetime" />
+          <Property Name="上一章" Type="nvarchar" MaxLength="50" />
+          <Property Name="本记录GUID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="下一章" Type="nvarchar" MaxLength="50" />
+          <Property Name="创建时间" Type="datetime" Nullable="false" />
+          <Property Name="采集用的URL1" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL2" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL3" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL4" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL5" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL6" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL7" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL8" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL9" Type="nvarchar" MaxLength="2000" />
+          <Property Name="采集用的URL10" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <Association Name="FK_书名表_分类表">
+          <End Role="分类表" Type="TygModel.Store.分类表" Multiplicity="1" />
+          <End Role="书名表" Type="TygModel.Store.书名表" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="分类表">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="分类标识" />
+            </Principal>
+            <Dependent Role="书名表">
+              <PropertyRef Name="分类表ID" />
+              <PropertyRef Name="分类标识" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_文章表_书名表">
+          <End Role="书名表" Type="TygModel.Store.书名表" Multiplicity="1" />
+          <End Role="文章表" Type="TygModel.Store.文章表" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="书名表">
+              <PropertyRef Name="GUID" />
+              <PropertyRef Name="书名" />
+              <PropertyRef Name="分类标识" />
+            </Principal>
+            <Dependent Role="文章表">
+              <PropertyRef Name="GUID" />
+              <PropertyRef Name="书名" />
+              <PropertyRef Name="分类标识" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TygModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="分类表" EntityType="TygModel.分类表" />
+          <EntitySet Name="书名表" EntityType="TygModel.书名表" />
+          <EntitySet Name="文章表" EntityType="TygModel.文章表" />
+          <AssociationSet Name="FK_书名表_分类表" Association="TygModel.FK_书名表_分类表">
+            <End Role="分类表" EntitySet="分类表" />
+            <End Role="书名表" EntitySet="书名表" />
+          </AssociationSet>
+          <AssociationSet Name="FK_文章表_书名表" Association="TygModel.FK_文章表_书名表">
+            <End Role="书名表" EntitySet="书名表" />
+            <End Role="文章表" EntitySet="文章表" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="分类表">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="分类标识" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="分类名称" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="通用分类" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="分类说明" Type="String" Nullable="false" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="分类标识" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="通用分类1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="备注" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="书名表" Relationship="TygModel.FK_书名表_分类表" FromRole="分类表" ToRole="书名表" />
+        </EntityType>
+        <EntityType Name="书名表">
+          <Key>
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="书名" />
+            <PropertyRef Name="分类标识" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="书名" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="分类标识" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="分类表ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="说明" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="作者名称" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="创建时间" Type="DateTime" Nullable="false" />
+          <Property Name="配图" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="周点击" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="总点击" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="周鲜花" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="总鲜花" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="免费" Type="Boolean" Nullable="false" />
+          <Property Name="完本" Type="Boolean" Nullable="false" />
+          <Property Name="最后更新时间" Type="DateTime" />
+          <Property Name="最新章节" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL1" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL2" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL3" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL4" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL5" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL6" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL7" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL8" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL9" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL10" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="分类表" Relationship="TygModel.FK_书名表_分类表" FromRole="书名表" ToRole="分类表" />
+          <NavigationProperty Name="文章表" Relationship="TygModel.FK_文章表_书名表" FromRole="书名表" ToRole="文章表" />
+        </EntityType>
+        <EntityType Name="文章表">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="书名" />
+            <PropertyRef Name="GUID" />
+            <PropertyRef Name="分类标识" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="书名" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="分类名称" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="分类标识" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="章节名" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="内容" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="总访问次数" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="最后访问时间" Type="DateTime" />
+          <Property Name="上一章" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="本记录GUID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="下一章" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="创建时间" Type="DateTime" Nullable="false" />
+          <Property Name="采集用的URL1" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL2" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL3" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL4" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL5" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL6" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL7" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL8" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL9" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <Property Name="采集用的URL10" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="书名表" Relationship="TygModel.FK_文章表_书名表" FromRole="文章表" ToRole="书名表" />
+        </EntityType>
+        <Association Name="FK_书名表_分类表">
+          <End Role="分类表" Type="TygModel.分类表" Multiplicity="1" />
+          <End Role="书名表" Type="TygModel.书名表" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="分类表">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="分类标识" />
+            </Principal>
+            <Dependent Role="书名表">
+              <PropertyRef Name="分类表ID" />
+              <PropertyRef Name="分类标识" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_文章表_书名表">
+          <End Role="书名表" Type="TygModel.书名表" Multiplicity="1" />
+          <End Role="文章表" Type="TygModel.文章表" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="书名表">
+              <PropertyRef Name="GUID" />
+              <PropertyRef Name="书名" />
+              <PropertyRef Name="分类标识" />
+            </Principal>
+            <Dependent Role="文章表">
+              <PropertyRef Name="GUID" />
+              <PropertyRef Name="书名" />
+              <PropertyRef Name="分类标识" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TygModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="分类表"><EntityTypeMapping TypeName="TygModel.分类表"><MappingFragment StoreEntitySet="分类表">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="分类名称" ColumnName="分类名称" />
+            <ScalarProperty Name="通用分类" ColumnName="通用分类" />
+            <ScalarProperty Name="分类说明" ColumnName="分类说明" />
+            <ScalarProperty Name="分类标识" ColumnName="分类标识" />
+            <ScalarProperty Name="通用分类1" ColumnName="通用分类1" />
+            <ScalarProperty Name="备注" ColumnName="备注" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="书名表"><EntityTypeMapping TypeName="TygModel.书名表"><MappingFragment StoreEntitySet="书名表">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="GUID" ColumnName="GUID" />
+            <ScalarProperty Name="书名" ColumnName="书名" />
+            <ScalarProperty Name="分类标识" ColumnName="分类标识" />
+            <ScalarProperty Name="分类表ID" ColumnName="分类表ID" />
+            <ScalarProperty Name="说明" ColumnName="说明" />
+            <ScalarProperty Name="作者名称" ColumnName="作者名称" />
+            <ScalarProperty Name="创建时间" ColumnName="创建时间" />
+            <ScalarProperty Name="配图" ColumnName="配图" />
+            <ScalarProperty Name="周点击" ColumnName="周点击" />
+            <ScalarProperty Name="总点击" ColumnName="总点击" />
+            <ScalarProperty Name="周鲜花" ColumnName="周鲜花" />
+            <ScalarProperty Name="总鲜花" ColumnName="总鲜花" />
+            <ScalarProperty Name="免费" ColumnName="免费" />
+            <ScalarProperty Name="完本" ColumnName="完本" />
+            <ScalarProperty Name="最后更新时间" ColumnName="最后更新时间" />
+            <ScalarProperty Name="最新章节" ColumnName="最新章节" />
+            <ScalarProperty Name="采集用的URL1" ColumnName="采集用的URL1" />
+            <ScalarProperty Name="采集用的URL2" ColumnName="采集用的URL2" />
+            <ScalarProperty Name="采集用的URL3" ColumnName="采集用的URL3" />
+            <ScalarProperty Name="采集用的URL4" ColumnName="采集用的URL4" />
+            <ScalarProperty Name="采集用的URL5" ColumnName="采集用的URL5" />
+            <ScalarProperty Name="采集用的URL6" ColumnName="采集用的URL6" />
+            <ScalarProperty Name="采集用的URL7" ColumnName="采集用的URL7" />
+            <ScalarProperty Name="采集用的URL8" ColumnName="采集用的URL8" />
+            <ScalarProperty Name="采集用的URL9" ColumnName="采集用的URL9" />
+            <ScalarProperty Name="采集用的URL10" ColumnName="采集用的URL10" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="文章表"><EntityTypeMapping TypeName="TygModel.文章表"><MappingFragment StoreEntitySet="文章表">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="书名" ColumnName="书名" />
+            <ScalarProperty Name="GUID" ColumnName="GUID" />
+            <ScalarProperty Name="分类名称" ColumnName="分类名称" />
+            <ScalarProperty Name="分类标识" ColumnName="分类标识" />
+            <ScalarProperty Name="章节名" ColumnName="章节名" />
+            <ScalarProperty Name="内容" ColumnName="内容" />
+            <ScalarProperty Name="总访问次数" ColumnName="总访问次数" />
+            <ScalarProperty Name="最后访问时间" ColumnName="最后访问时间" />
+            <ScalarProperty Name="上一章" ColumnName="上一章" />
+            <ScalarProperty Name="本记录GUID" ColumnName="本记录GUID" />
+            <ScalarProperty Name="下一章" ColumnName="下一章" />
+            <ScalarProperty Name="创建时间" ColumnName="创建时间" />
+            <ScalarProperty Name="采集用的URL1" ColumnName="采集用的URL1" />
+            <ScalarProperty Name="采集用的URL2" ColumnName="采集用的URL2" />
+            <ScalarProperty Name="采集用的URL3" ColumnName="采集用的URL3" />
+            <ScalarProperty Name="采集用的URL4" ColumnName="采集用的URL4" />
+            <ScalarProperty Name="采集用的URL5" ColumnName="采集用的URL5" />
+            <ScalarProperty Name="采集用的URL6" ColumnName="采集用的URL6" />
+            <ScalarProperty Name="采集用的URL7" ColumnName="采集用的URL7" />
+            <ScalarProperty Name="采集用的URL8" ColumnName="采集用的URL8" />
+            <ScalarProperty Name="采集用的URL9" ColumnName="采集用的URL9" />
+            <ScalarProperty Name="采集用的URL10" ColumnName="采集用的URL10" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TygModel">
+        <EntityTypeShape EntityType="TygModel.分类表" Width="1.5" PointX="0.75" PointY="3.125" Height="2.5430916341145835" IsExpanded="true" />
+        <EntityTypeShape EntityType="TygModel.书名表" Width="1.5" PointX="3" PointY="1.125" Height="6.5545052083333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="TygModel.文章表" Width="1.5" PointX="5.25" PointY="1.625" Height="5.5994067382812514" IsExpanded="true" />
+        <AssociationConnector Association="TygModel.FK_书名表_分类表" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.3965458170572917" />
+          <ConnectorPoint PointX="3" PointY="4.3965458170572917" />
+        </AssociationConnector>
+        <AssociationConnector Association="TygModel.FK_文章表_书名表" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.4247033691406257" />
+          <ConnectorPoint PointX="5.25" PointY="4.4247033691406257" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web", "{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Web"
+		Debug.AspNetCompiler.PhysicalPath = "Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web"
+		Release.AspNetCompiler.PhysicalPath = "Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "24235"
+		VWDDynamicPort = "false"
+		VWDVirtualPath = "/"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "采集应用程序", "采集应用程序\采集应用程序.csproj", "{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "生成应用程序", "生成应用程序\生成应用程序.csproj", "{5F2EC585-C156-44B2-AFBA-18D778FC90C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skybot.Collection.Manager", "Skybot.Collection.Manager\Skybot.Collection.Manager.csproj", "{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs28
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = 生成应用程序\\生成应用程序.csproj
+		SccProjectName1 = 生成应用程序
+		SccLocalPath1 = 生成应用程序
+		SccProjectUniqueName2 = 采集应用程序\\采集应用程序.csproj
+		SccProjectName2 = 采集应用程序
+		SccLocalPath2 = 采集应用程序
+		SccProjectUniqueName3 = Skybot.Collection.Manager\\Skybot.Collection.Manager.csproj
+		SccProjectName3 = Skybot.Collection.Manager
+		SccLocalPath3 = Skybot.Collection.Manager
+		SccWebProject4 = true
+		SccProjectUniqueName4 = Web
+		SccProjectName4 = Web
+		SccLocalPath4 = Web
+		SccProjectEnlistmentChoice4 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CF9F4D24-ABAF-4BFF-A7CC-A756754F67FD}.Release|x86.ActiveCfg = Debug|Any CPU
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Debug|x86.ActiveCfg = Debug|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Debug|x86.Build.0 = Debug|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Release|Any CPU.ActiveCfg = Release|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Release|x86.ActiveCfg = Release|x86
+		{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}.Release|x86.Build.0 = Release|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Debug|x86.ActiveCfg = Debug|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Debug|x86.Build.0 = Debug|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Release|Any CPU.ActiveCfg = Release|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Release|x86.ActiveCfg = Release|x86
+		{5F2EC585-C156-44B2-AFBA-18D778FC90C3}.Release|x86.Build.0 = Release|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Debug|x86.ActiveCfg = Debug|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Debug|x86.Build.0 = Debug|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Release|Any CPU.ActiveCfg = Release|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Release|x86.ActiveCfg = Release|x86
+		{F84E980C-B7BE-4104-A43C-04B39B0BBFF8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

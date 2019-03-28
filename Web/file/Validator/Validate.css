@@ -1,0 +1,51 @@
+﻿.tooltips {
+	PADDING-RIGHT: 5px; BORDER-TOP: #00b800 1px solid; PADDING-LEFT: 5px; BACKGROUND: url(tips_icon.gif) no-repeat 50% bottom; LEFT: -500px; PADDING-BOTTOM: 15px; MARGIN: 0px; FONT: bold 12px Tahoma; WIDTH: 290px; COLOR: #666; PADDING-TOP: 5px; POSITION: absolute; TOP: -500px
+}
+.summary 
+{
+	BORDER-RIGHT: #0099cc 1px solid; BORDER-TOP: #0099cc 1px solid; DISPLAY: none; BACKGROUND: #ddedfb; FONT: 12px Tahoma; MARGIN-LEFT: 3px; BORDER-LEFT: #0099cc 1px solid; COLOR: #666; BORDER-BOTTOM: #0099cc 1px solid
+}
+.summary .title {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; FONT-WEIGHT: bold; PADDING-BOTTOM: 3px; MARGIN-LEFT: 8px; PADDING-TOP: 3px
+}
+.summary OL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 2px
+}
+.style-warn {
+	BACKGROUND-COLOR: yellow
+}
+.style-pass {
+	BACKGROUND-COLOR: blue
+}
+.msg {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #fff 1px solid; DISPLAY: inline; PADDING-LEFT: 18px; BACKGROUND: url(icons.gif) #fff no-repeat -25px -75px; PADDING-BOTTOM: 2px; MARGIN-LEFT: 5px; VERTICAL-ALIGN: 3px; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #fff 1px solid;
+	/*定义字体样式*/
+	color:#cccccc;
+	/*定义字体样式 end*/
+}
+.pass {
+	 BACKGROUND-POSITION: 1px -57px; BORDER-LEFT-COLOR: #00be00; BORDER-BOTTOM-COLOR: #00be00; BORDER-TOP-COLOR: #00be00; BACKGROUND-COLOR: #e6ffe6; BORDER-RIGHT-COLOR: #00be00;
+	 
+}
+.error {
+	BACKGROUND-POSITION: 1px -38px; BORDER-LEFT-COLOR: #ff6600; BORDER-BOTTOM-COLOR: #ff6600; BORDER-TOP-COLOR: #ff6600; BACKGROUND-COLOR: #fff2e9; BORDER-RIGHT-COLOR: #ff6600
+	;color:#000000;
+}
+.tips 
+{
+	
+	BACKGROUND-POSITION: 1px 2px; BORDER-LEFT-COLOR: #00a8ff; BORDER-BOTTOM-COLOR: #00a8ff; BORDER-TOP-COLOR: #00a8ff; BACKGROUND-COLOR: #e2f5ff; BORDER-RIGHT-COLOR: #00a8ff
+;color:#000000;
+}
+.loading {
+	BORDER-LEFT-COLOR: #00a8ff; BACKGROUND: url(loading.gif) #e2f5ff no-repeat left center; BORDER-BOTTOM-COLOR: #00a8ff; BORDER-TOP-COLOR: #00a8ff; BORDER-RIGHT-COLOR: #00a8ff
+}
+.block {
+	BACKGROUND-POSITION: 1px -18px; BORDER-LEFT-COLOR: #ff6600; BORDER-BOTTOM-COLOR: #ff6600; BORDER-TOP-COLOR: #ff6600; BACKGROUND-COLOR: #fff2e9; BORDER-RIGHT-COLOR: #ff6600
+}
+.clearfix {
+	CLEAR: both
+}
+#passwordInfo {
+	BACKGROUND: url(levels.gif) no-repeat left top; MARGIN-LEFT: 5px; WIDTH: 220px; HEIGHT: 20px
+}

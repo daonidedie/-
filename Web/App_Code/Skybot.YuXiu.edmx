@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="YuXiuModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="YuXiuModelStoreContainer">
+          <EntitySet Name="CX_Collect" EntityType="YuXiuModel.Store.CX_Collect" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_Collect_Class" EntityType="YuXiuModel.Store.CX_Collect_Class" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_Collect_Replace" EntityType="YuXiuModel.Store.CX_Collect_Replace" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_Column" EntityType="YuXiuModel.Store.CX_Column" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_FAQonLine" EntityType="YuXiuModel.Store.CX_FAQonLine" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_Gbook" EntityType="YuXiuModel.Store.CX_Gbook" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cx_keyWord" EntityType="YuXiuModel.Store.Cx_keyWord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_keyWord_Class" EntityType="YuXiuModel.Store.CX_keyWord_Class" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_link" EntityType="YuXiuModel.Store.CX_link" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_loginState" EntityType="YuXiuModel.Store.CX_loginState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_NEWS" EntityType="YuXiuModel.Store.CX_NEWS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CX_NEWS_Class" EntityType="YuXiuModel.Store.CX_NEWS_Class" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TreeClass" EntityType="YuXiuModel.Store.TreeClass" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Use" EntityType="YuXiuModel.Store.Use" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="CX_Collect">
+          <Key>
+            <PropertyRef Name="CX_Collect_id" />
+          </Key>
+          <Property Name="CX_Collect_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Collect_Name" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CX_Collect_Contont" Type="text" />
+          <Property Name="CX_Collect_Time" Type="datetime" />
+          <Property Name="CX_Collect_Class_CrtFileName" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Collect_Class_Creater" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Collect_Class_Itemplitate" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Collect_Class_id" Type="numeric" Nullable="false" />
+          <Property Name="CX_Collect_FormURL" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CX_Collect_Sitate" Type="decimal" Nullable="false" />
+          <Property Name="CX_NEWS_Class_id" Type="decimal" />
+          <Property Name="Cx_keyWord_Name" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="CX_Collect_Class">
+          <Key>
+            <PropertyRef Name="CX_Collect_Class_id" />
+          </Key>
+          <Property Name="CX_Collect_Class_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Collect_Class_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Collect_Class_Page" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Column_id" Type="decimal" />
+          <Property Name="CX_Collect_Class_CrtFileName" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Collect_Class_CharSet" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Parame" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_HTML" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_STYLE" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_DIV" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_A" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_CLASS" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_FONT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_SPAN" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_IFRAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_SCRIPT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Filtrate_OBJECT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Collect_Class_Itemplitate" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Collect_Class_UpFile" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Collect_Class_Creater" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Collect_Class_Itemplitate_Parame" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Collect_Class_List" Type="text" />
+          <Property Name="CX_Collect_Class_Link" Type="text" />
+          <Property Name="CX_Collect_Class_Title" Type="text" />
+          <Property Name="CX_Collect_Class_Contont" Type="text" />
+        </EntityType>
+        <EntityType Name="CX_Collect_Replace">
+          <Key>
+            <PropertyRef Name="CX_Collect_Replace_id" />
+          </Key>
+          <Property Name="CX_Collect_Replace_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cx_Collect_Relace_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cx_Collect_Relace_Contont" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="CX_Column">
+          <Key>
+            <PropertyRef Name="CX_Column_id" />
+          </Key>
+          <Property Name="CX_Column_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Column_followid" Type="decimal" Nullable="false" />
+          <Property Name="CX_Column_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Column_Class" Type="int" />
+          <Property Name="CX_Column_Directory" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Column_Explair" Type="nvarchar" />
+          <Property Name="CX_Column_ItemTemplate_Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Column_ItemTeplate_Parame" Type="nvarchar" MaxLength="200" />
+          <Property Name="CX_Column_Sort" Type="int" Nullable="false" />
+          <Property Name="CX_CX_Column_Tab_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Column_LX" Type="int" />
+          <Property Name="CX_Column_Pic" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="CX_FAQonLine">
+          <Key>
+            <PropertyRef Name="Cx_FAQonLine_id" />
+          </Key>
+          <Property Name="Cx_FAQonLine_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cx_FAQonLine_Question_Name" Type="varchar" MaxLength="250" />
+          <Property Name="Cx_FAQonLine_Answer_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cx_FAQonLine_Question" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cx_FAQonLine_Question_Contont" Type="text" />
+          <Property Name="Cx_FAQonLine_Answer_Contont" Type="text" />
+          <Property Name="Cx_FAQonLine_PublicTime" Type="datetime" Nullable="false" />
+          <Property Name="Cx_FAQonLine_Address" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cx_FAQonLine_Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cx_FAQonLine_EMail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cx_FAQonLine_Sort" Type="int" />
+        </EntityType>
+        <EntityType Name="CX_Gbook">
+          <Key>
+            <PropertyRef Name="CX_Gbook_id" />
+          </Key>
+          <Property Name="CX_Gbook_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Gbook_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Gbook_Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Gbook_Doctor" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Gbook_From" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Gbook_Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Gbook_Pic_Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_Gbook_Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Gbook_QQ" Type="nvarchar" MaxLength="12" />
+          <Property Name="CX_Gbook_Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="CX_Gbook_Sex" Type="nvarchar" MaxLength="2" />
+          <Property Name="CX_Gbook_lx" Type="int" />
+          <Property Name="CX_Gbook_IP" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Gbook_PublicTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_Gbook_Cont" Type="text" />
+          <Property Name="CX_Gbook_Sort" Type="int" />
+          <Property Name="CX_Gbook_ContRe" Type="text" />
+        </EntityType>
+        <EntityType Name="Cx_keyWord">
+          <Key>
+            <PropertyRef Name="Cx_keyWord_id" />
+          </Key>
+          <Property Name="Cx_keyWord_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cx_keyWord_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cx_keyWord_Sort" Type="int" />
+          <Property Name="CX_keyWord_Class_id" Type="nvarchar" MaxLength="550" />
+        </EntityType>
+        <EntityType Name="CX_keyWord_Class">
+          <Key>
+            <PropertyRef Name="CX_keyWord_Class_id" />
+          </Key>
+          <Property Name="CX_keyWord_Class_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_keyWord_Class_Name" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CX_link">
+          <Key>
+            <PropertyRef Name="CX_link_id" />
+          </Key>
+          <Property Name="CX_link_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Column_id" Type="decimal" />
+          <Property Name="CX_link_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_link_LX" Type="nvarchar" MaxLength="2" />
+          <Property Name="CX_link_Pic" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_link_Cont" Type="nvarchar" />
+          <Property Name="CX_link_Sort" Type="int" />
+          <Property Name="CX_link_linkUrl" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CX_loginState">
+          <Key>
+            <PropertyRef Name="CX_loginState_id" />
+          </Key>
+          <Property Name="CX_loginState_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_loginState_uid" Type="nvarchar" MaxLength="300" />
+          <Property Name="CX_loginState_Name" Type="nvarchar" MaxLength="300" />
+          <Property Name="CX_loginState_ActionTime" Type="datetime" />
+          <Property Name="CX_loginState_ActionInfo" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="CX_NEWS">
+          <Key>
+            <PropertyRef Name="CX_NEWS_id" />
+          </Key>
+          <Property Name="CX_NEWS_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_NEWS_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_NEWS_Class_id" Type="decimal" Nullable="false" />
+          <Property Name="CX_NEWS_Creater" Type="nvarchar" MaxLength="50" />
+          <Property Name="CX_NEWS_From" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CX_NEWS_Top" Type="nvarchar" MaxLength="2" />
+          <Property Name="CX_NEWS_Pic" Type="nvarchar" MaxLength="2" />
+          <Property Name="CX_NEWS_Pic_Url" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_NEWS_PublicTime" Type="datetime" Nullable="false" />
+          <Property Name="CX_NEWS_Cont" Type="text" />
+          <Property Name="CX_NEWS_Sort" Type="decimal" />
+          <Property Name="Cx_keyWord_Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_NEWS_Title" Type="nvarchar" />
+          <Property Name="CX_NEWS_KeyWords" Type="nvarchar" />
+          <Property Name="CX_NEWS_Description" Type="nvarchar" />
+          <Property Name="CX_NEWS_Class_Edit" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CX_NEWS_Class">
+          <Key>
+            <PropertyRef Name="CX_NEWS_Class_id" />
+          </Key>
+          <Property Name="CX_NEWS_Class_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CX_NEWS_Class_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_Column_id" Type="decimal" />
+          <Property Name="CX_NEWS_Class_Explier" Type="nvarchar" MaxLength="250" />
+          <Property Name="CX_NEWS_Class_Itemplitate_Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_NEWS_Class_Itemplitate_Parame" Type="nvarchar" MaxLength="200" />
+          <Property Name="CX_NEWS_Class_Pic" Type="nvarchar" MaxLength="500" />
+          <Property Name="CX_NEWS_Class_CreateFielfront" Type="nvarchar" MaxLength="200" />
+          <Property Name="CX_NEWS_Class_Directory" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TreeClass">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="followid" Type="decimal" />
+          <Property Name="SortNum" Type="decimal" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="150" />
+          <Property Name="intro" Type="nvarchar" MaxLength="50" />
+          <Property Name="URL" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Use">
+          <Key>
+            <PropertyRef Name="Use_id" />
+          </Key>
+          <Property Name="uid" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="pwd" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Use_id" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="flg" Type="nvarchar(max)" />
+          <Property Name="UseName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YuXiuModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="YuXiuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CX_Collect" EntityType="YuXiuModel.CX_Collect" />
+          <EntitySet Name="CX_Collect_Class" EntityType="YuXiuModel.CX_Collect_Class" />
+          <EntitySet Name="CX_Collect_Replace" EntityType="YuXiuModel.CX_Collect_Replace" />
+          <EntitySet Name="CX_Column" EntityType="YuXiuModel.CX_Column" />
+          <EntitySet Name="CX_FAQonLine" EntityType="YuXiuModel.CX_FAQonLine" />
+          <EntitySet Name="CX_Gbook" EntityType="YuXiuModel.CX_Gbook" />
+          <EntitySet Name="Cx_keyWord" EntityType="YuXiuModel.Cx_keyWord" />
+          <EntitySet Name="CX_keyWord_Class" EntityType="YuXiuModel.CX_keyWord_Class" />
+          <EntitySet Name="CX_link" EntityType="YuXiuModel.CX_link" />
+          <EntitySet Name="CX_loginState" EntityType="YuXiuModel.CX_loginState" />
+          <EntitySet Name="CX_NEWS" EntityType="YuXiuModel.CX_NEWS" />
+          <EntitySet Name="CX_NEWS_Class" EntityType="YuXiuModel.CX_NEWS_Class" />
+          <EntitySet Name="TreeClass" EntityType="YuXiuModel.TreeClass" />
+          <EntitySet Name="Use" EntityType="YuXiuModel.Use" />
+        </EntityContainer>
+        <EntityType Name="CX_Collect">
+          <Key>
+            <PropertyRef Name="CX_Collect_id" />
+          </Key>
+          <Property Name="CX_Collect_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Collect_Name" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Contont" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CX_Collect_Time" Type="DateTime" />
+          <Property Name="CX_Collect_Class_CrtFileName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Creater" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Itemplitate" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CX_Collect_FormURL" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Sitate" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CX_NEWS_Class_id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cx_keyWord_Name" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_Collect_Class">
+          <Key>
+            <PropertyRef Name="CX_Collect_Class_id" />
+          </Key>
+          <Property Name="CX_Collect_Class_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Collect_Class_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Page" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CX_Collect_Class_CrtFileName" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_CharSet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Parame" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_HTML" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_STYLE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_DIV" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_A" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_CLASS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_FONT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_SPAN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_IFRAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_SCRIPT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Filtrate_OBJECT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Itemplitate" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_UpFile" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Creater" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Itemplitate_Parame" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Collect_Class_List" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Link" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Title" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CX_Collect_Class_Contont" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_Collect_Replace">
+          <Key>
+            <PropertyRef Name="CX_Collect_Replace_id" />
+          </Key>
+          <Property Name="CX_Collect_Replace_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cx_Collect_Relace_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_Collect_Relace_Contont" Type="String" MaxLength="2000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_Column">
+          <Key>
+            <PropertyRef Name="CX_Column_id" />
+          </Key>
+          <Property Name="CX_Column_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Column_followid" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CX_Column_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_Class" Type="Int32" />
+          <Property Name="CX_Column_Directory" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_Explair" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_ItemTemplate_Url" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_ItemTeplate_Parame" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_Sort" Type="Int32" Nullable="false" />
+          <Property Name="CX_CX_Column_Tab_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_LX" Type="Int32" />
+          <Property Name="CX_Column_Pic" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_FAQonLine">
+          <Key>
+            <PropertyRef Name="Cx_FAQonLine_id" />
+          </Key>
+          <Property Name="Cx_FAQonLine_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cx_FAQonLine_Question_Name" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_Answer_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_Question" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_Question_Contont" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_Answer_Contont" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_PublicTime" Type="DateTime" Nullable="false" />
+          <Property Name="Cx_FAQonLine_Address" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_Tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_EMail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_FAQonLine_Sort" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CX_Gbook">
+          <Key>
+            <PropertyRef Name="CX_Gbook_id" />
+          </Key>
+          <Property Name="CX_Gbook_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Gbook_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Creater" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Doctor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_From" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Pic_Url" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Tel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_QQ" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Sex" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_lx" Type="Int32" />
+          <Property Name="CX_Gbook_IP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_PublicTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Gbook_Cont" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CX_Gbook_Sort" Type="Int32" />
+          <Property Name="CX_Gbook_ContRe" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Cx_keyWord">
+          <Key>
+            <PropertyRef Name="Cx_keyWord_id" />
+          </Key>
+          <Property Name="Cx_keyWord_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cx_keyWord_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Cx_keyWord_Sort" Type="Int32" />
+          <Property Name="CX_keyWord_Class_id" Type="String" MaxLength="550" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_keyWord_Class">
+          <Key>
+            <PropertyRef Name="CX_keyWord_Class_id" />
+          </Key>
+          <Property Name="CX_keyWord_Class_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_keyWord_Class_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_link">
+          <Key>
+            <PropertyRef Name="CX_link_id" />
+          </Key>
+          <Property Name="CX_link_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_Column_id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CX_link_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_link_LX" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="CX_link_Pic" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_link_Cont" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_link_Sort" Type="Int32" />
+          <Property Name="CX_link_linkUrl" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_loginState">
+          <Key>
+            <PropertyRef Name="CX_loginState_id" />
+          </Key>
+          <Property Name="CX_loginState_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_loginState_uid" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="CX_loginState_Name" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="CX_loginState_ActionTime" Type="DateTime" />
+          <Property Name="CX_loginState_ActionInfo" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_NEWS">
+          <Key>
+            <PropertyRef Name="CX_NEWS_id" />
+          </Key>
+          <Property Name="CX_NEWS_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_NEWS_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CX_NEWS_Creater" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_From" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Top" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Pic" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Pic_Url" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_PublicTime" Type="DateTime" Nullable="false" />
+          <Property Name="CX_NEWS_Cont" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CX_NEWS_Sort" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Cx_keyWord_Name" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Title" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_KeyWords" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_Edit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CX_NEWS_Class">
+          <Key>
+            <PropertyRef Name="CX_NEWS_Class_id" />
+          </Key>
+          <Property Name="CX_NEWS_Class_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CX_NEWS_Class_Name" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_Column_id" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CX_NEWS_Class_Explier" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_Itemplitate_Address" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_Itemplitate_Parame" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_Pic" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_CreateFielfront" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CX_NEWS_Class_Directory" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TreeClass">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="followid" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SortNum" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ClassName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="intro" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Use">
+          <Key>
+            <PropertyRef Name="Use_id" />
+          </Key>
+          <Property Name="uid" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="pwd" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Use_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="flg" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YuXiuModelStoreContainer" CdmEntityContainer="YuXiuEntities">
+          <EntitySetMapping Name="CX_Collect">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_Collect">
+              <MappingFragment StoreEntitySet="CX_Collect">
+                <ScalarProperty Name="CX_Collect_id" ColumnName="CX_Collect_id" />
+                <ScalarProperty Name="CX_Collect_Name" ColumnName="CX_Collect_Name" />
+                <ScalarProperty Name="CX_Collect_Contont" ColumnName="CX_Collect_Contont" />
+                <ScalarProperty Name="CX_Collect_Time" ColumnName="CX_Collect_Time" />
+                <ScalarProperty Name="CX_Collect_Class_CrtFileName" ColumnName="CX_Collect_Class_CrtFileName" />
+                <ScalarProperty Name="CX_Collect_Class_Creater" ColumnName="CX_Collect_Class_Creater" />
+                <ScalarProperty Name="CX_Collect_Class_Itemplitate" ColumnName="CX_Collect_Class_Itemplitate" />
+                <ScalarProperty Name="CX_Collect_Class_id" ColumnName="CX_Collect_Class_id" />
+                <ScalarProperty Name="CX_Collect_FormURL" ColumnName="CX_Collect_FormURL" />
+                <ScalarProperty Name="CX_Collect_Sitate" ColumnName="CX_Collect_Sitate" />
+                <ScalarProperty Name="CX_NEWS_Class_id" ColumnName="CX_NEWS_Class_id" />
+                <ScalarProperty Name="Cx_keyWord_Name" ColumnName="Cx_keyWord_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_Collect_Class">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_Collect_Class">
+              <MappingFragment StoreEntitySet="CX_Collect_Class">
+                <ScalarProperty Name="CX_Collect_Class_id" ColumnName="CX_Collect_Class_id" />
+                <ScalarProperty Name="CX_Collect_Class_Name" ColumnName="CX_Collect_Class_Name" />
+                <ScalarProperty Name="CX_Collect_Class_Page" ColumnName="CX_Collect_Class_Page" />
+                <ScalarProperty Name="CX_Column_id" ColumnName="CX_Column_id" />
+                <ScalarProperty Name="CX_Collect_Class_CrtFileName" ColumnName="CX_Collect_Class_CrtFileName" />
+                <ScalarProperty Name="CX_Collect_Class_CharSet" ColumnName="CX_Collect_Class_CharSet" />
+                <ScalarProperty Name="CX_Collect_Class_Parame" ColumnName="CX_Collect_Class_Parame" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_HTML" ColumnName="CX_Collect_Class_Filtrate_HTML" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_STYLE" ColumnName="CX_Collect_Class_Filtrate_STYLE" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_DIV" ColumnName="CX_Collect_Class_Filtrate_DIV" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_A" ColumnName="CX_Collect_Class_Filtrate_A" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_CLASS" ColumnName="CX_Collect_Class_Filtrate_CLASS" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_FONT" ColumnName="CX_Collect_Class_Filtrate_FONT" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_SPAN" ColumnName="CX_Collect_Class_Filtrate_SPAN" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_IFRAME" ColumnName="CX_Collect_Class_Filtrate_IFRAME" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_SCRIPT" ColumnName="CX_Collect_Class_Filtrate_SCRIPT" />
+                <ScalarProperty Name="CX_Collect_Class_Filtrate_OBJECT" ColumnName="CX_Collect_Class_Filtrate_OBJECT" />
+                <ScalarProperty Name="CX_Collect_Class_Itemplitate" ColumnName="CX_Collect_Class_Itemplitate" />
+                <ScalarProperty Name="CX_Collect_Class_UpFile" ColumnName="CX_Collect_Class_UpFile" />
+                <ScalarProperty Name="CX_Collect_Class_Creater" ColumnName="CX_Collect_Class_Creater" />
+                <ScalarProperty Name="CX_Collect_Class_Itemplitate_Parame" ColumnName="CX_Collect_Class_Itemplitate_Parame" />
+                <ScalarProperty Name="CX_Collect_Class_List" ColumnName="CX_Collect_Class_List" />
+                <ScalarProperty Name="CX_Collect_Class_Link" ColumnName="CX_Collect_Class_Link" />
+                <ScalarProperty Name="CX_Collect_Class_Title" ColumnName="CX_Collect_Class_Title" />
+                <ScalarProperty Name="CX_Collect_Class_Contont" ColumnName="CX_Collect_Class_Contont" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_Collect_Replace">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_Collect_Replace">
+              <MappingFragment StoreEntitySet="CX_Collect_Replace">
+                <ScalarProperty Name="CX_Collect_Replace_id" ColumnName="CX_Collect_Replace_id" />
+                <ScalarProperty Name="Cx_Collect_Relace_Name" ColumnName="Cx_Collect_Relace_Name" />
+                <ScalarProperty Name="Cx_Collect_Relace_Contont" ColumnName="Cx_Collect_Relace_Contont" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_Column">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_Column">
+              <MappingFragment StoreEntitySet="CX_Column">
+                <ScalarProperty Name="CX_Column_id" ColumnName="CX_Column_id" />
+                <ScalarProperty Name="CX_Column_followid" ColumnName="CX_Column_followid" />
+                <ScalarProperty Name="CX_Column_Name" ColumnName="CX_Column_Name" />
+                <ScalarProperty Name="CX_Column_Class" ColumnName="CX_Column_Class" />
+                <ScalarProperty Name="CX_Column_Directory" ColumnName="CX_Column_Directory" />
+                <ScalarProperty Name="CX_Column_Explair" ColumnName="CX_Column_Explair" />
+                <ScalarProperty Name="CX_Column_ItemTemplate_Url" ColumnName="CX_Column_ItemTemplate_Url" />
+                <ScalarProperty Name="CX_Column_ItemTeplate_Parame" ColumnName="CX_Column_ItemTeplate_Parame" />
+                <ScalarProperty Name="CX_Column_Sort" ColumnName="CX_Column_Sort" />
+                <ScalarProperty Name="CX_CX_Column_Tab_Name" ColumnName="CX_CX_Column_Tab_Name" />
+                <ScalarProperty Name="CX_Column_LX" ColumnName="CX_Column_LX" />
+                <ScalarProperty Name="CX_Column_Pic" ColumnName="CX_Column_Pic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_FAQonLine">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_FAQonLine">
+              <MappingFragment StoreEntitySet="CX_FAQonLine">
+                <ScalarProperty Name="Cx_FAQonLine_id" ColumnName="Cx_FAQonLine_id" />
+                <ScalarProperty Name="Cx_FAQonLine_Question_Name" ColumnName="Cx_FAQonLine_Question_Name" />
+                <ScalarProperty Name="Cx_FAQonLine_Answer_Name" ColumnName="Cx_FAQonLine_Answer_Name" />
+                <ScalarProperty Name="Cx_FAQonLine_Question" ColumnName="Cx_FAQonLine_Question" />
+                <ScalarProperty Name="Cx_FAQonLine_Question_Contont" ColumnName="Cx_FAQonLine_Question_Contont" />
+                <ScalarProperty Name="Cx_FAQonLine_Answer_Contont" ColumnName="Cx_FAQonLine_Answer_Contont" />
+                <ScalarProperty Name="Cx_FAQonLine_PublicTime" ColumnName="Cx_FAQonLine_PublicTime" />
+                <ScalarProperty Name="Cx_FAQonLine_Address" ColumnName="Cx_FAQonLine_Address" />
+                <ScalarProperty Name="Cx_FAQonLine_Tel" ColumnName="Cx_FAQonLine_Tel" />
+                <ScalarProperty Name="Cx_FAQonLine_EMail" ColumnName="Cx_FAQonLine_EMail" />
+                <ScalarProperty Name="Cx_FAQonLine_Sort" ColumnName="Cx_FAQonLine_Sort" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_Gbook">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_Gbook">
+              <MappingFragment StoreEntitySet="CX_Gbook">
+                <ScalarProperty Name="CX_Gbook_id" ColumnName="CX_Gbook_id" />
+                <ScalarProperty Name="CX_Gbook_Name" ColumnName="CX_Gbook_Name" />
+                <ScalarProperty Name="CX_Gbook_Creater" ColumnName="CX_Gbook_Creater" />
+                <ScalarProperty Name="CX_Gbook_Doctor" ColumnName="CX_Gbook_Doctor" />
+                <ScalarProperty Name="CX_Gbook_From" ColumnName="CX_Gbook_From" />
+                <ScalarProperty Name="CX_Gbook_Address" ColumnName="CX_Gbook_Address" />
+                <ScalarProperty Name="CX_Gbook_Pic_Url" ColumnName="CX_Gbook_Pic_Url" />
+                <ScalarProperty Name="CX_Gbook_Tel" ColumnName="CX_Gbook_Tel" />
+                <ScalarProperty Name="CX_Gbook_QQ" ColumnName="CX_Gbook_QQ" />
+                <ScalarProperty Name="CX_Gbook_Email" ColumnName="CX_Gbook_Email" />
+                <ScalarProperty Name="CX_Gbook_Sex" ColumnName="CX_Gbook_Sex" />
+                <ScalarProperty Name="CX_Gbook_lx" ColumnName="CX_Gbook_lx" />
+                <ScalarProperty Name="CX_Gbook_IP" ColumnName="CX_Gbook_IP" />
+                <ScalarProperty Name="CX_Gbook_PublicTime" ColumnName="CX_Gbook_PublicTime" />
+                <ScalarProperty Name="CX_Gbook_Cont" ColumnName="CX_Gbook_Cont" />
+                <ScalarProperty Name="CX_Gbook_Sort" ColumnName="CX_Gbook_Sort" />
+                <ScalarProperty Name="CX_Gbook_ContRe" ColumnName="CX_Gbook_ContRe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cx_keyWord">
+            <EntityTypeMapping TypeName="YuXiuModel.Cx_keyWord">
+              <MappingFragment StoreEntitySet="Cx_keyWord">
+                <ScalarProperty Name="Cx_keyWord_id" ColumnName="Cx_keyWord_id" />
+                <ScalarProperty Name="Cx_keyWord_Name" ColumnName="Cx_keyWord_Name" />
+                <ScalarProperty Name="Cx_keyWord_Sort" ColumnName="Cx_keyWord_Sort" />
+                <ScalarProperty Name="CX_keyWord_Class_id" ColumnName="CX_keyWord_Class_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_keyWord_Class">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_keyWord_Class">
+              <MappingFragment StoreEntitySet="CX_keyWord_Class">
+                <ScalarProperty Name="CX_keyWord_Class_id" ColumnName="CX_keyWord_Class_id" />
+                <ScalarProperty Name="CX_keyWord_Class_Name" ColumnName="CX_keyWord_Class_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_link">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_link">
+              <MappingFragment StoreEntitySet="CX_link">
+                <ScalarProperty Name="CX_link_id" ColumnName="CX_link_id" />
+                <ScalarProperty Name="CX_Column_id" ColumnName="CX_Column_id" />
+                <ScalarProperty Name="CX_link_Name" ColumnName="CX_link_Name" />
+                <ScalarProperty Name="CX_link_LX" ColumnName="CX_link_LX" />
+                <ScalarProperty Name="CX_link_Pic" ColumnName="CX_link_Pic" />
+                <ScalarProperty Name="CX_link_Cont" ColumnName="CX_link_Cont" />
+                <ScalarProperty Name="CX_link_Sort" ColumnName="CX_link_Sort" />
+                <ScalarProperty Name="CX_link_linkUrl" ColumnName="CX_link_linkUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_loginState">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_loginState">
+              <MappingFragment StoreEntitySet="CX_loginState">
+                <ScalarProperty Name="CX_loginState_id" ColumnName="CX_loginState_id" />
+                <ScalarProperty Name="CX_loginState_uid" ColumnName="CX_loginState_uid" />
+                <ScalarProperty Name="CX_loginState_Name" ColumnName="CX_loginState_Name" />
+                <ScalarProperty Name="CX_loginState_ActionTime" ColumnName="CX_loginState_ActionTime" />
+                <ScalarProperty Name="CX_loginState_ActionInfo" ColumnName="CX_loginState_ActionInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_NEWS">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_NEWS">
+              <MappingFragment StoreEntitySet="CX_NEWS">
+                <ScalarProperty Name="CX_NEWS_id" ColumnName="CX_NEWS_id" />
+                <ScalarProperty Name="CX_NEWS_Name" ColumnName="CX_NEWS_Name" />
+                <ScalarProperty Name="CX_NEWS_Class_id" ColumnName="CX_NEWS_Class_id" />
+                <ScalarProperty Name="CX_NEWS_Creater" ColumnName="CX_NEWS_Creater" />
+                <ScalarProperty Name="CX_NEWS_From" ColumnName="CX_NEWS_From" />
+                <ScalarProperty Name="CX_NEWS_Top" ColumnName="CX_NEWS_Top" />
+                <ScalarProperty Name="CX_NEWS_Pic" ColumnName="CX_NEWS_Pic" />
+                <ScalarProperty Name="CX_NEWS_Pic_Url" ColumnName="CX_NEWS_Pic_Url" />
+                <ScalarProperty Name="CX_NEWS_PublicTime" ColumnName="CX_NEWS_PublicTime" />
+                <ScalarProperty Name="CX_NEWS_Cont" ColumnName="CX_NEWS_Cont" />
+                <ScalarProperty Name="CX_NEWS_Sort" ColumnName="CX_NEWS_Sort" />
+                <ScalarProperty Name="Cx_keyWord_Name" ColumnName="Cx_keyWord_Name" />
+                <ScalarProperty Name="CX_NEWS_Title" ColumnName="CX_NEWS_Title" />
+                <ScalarProperty Name="CX_NEWS_KeyWords" ColumnName="CX_NEWS_KeyWords" />
+                <ScalarProperty Name="CX_NEWS_Description" ColumnName="CX_NEWS_Description" />
+                <ScalarProperty Name="CX_NEWS_Class_Edit" ColumnName="CX_NEWS_Class_Edit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CX_NEWS_Class">
+            <EntityTypeMapping TypeName="YuXiuModel.CX_NEWS_Class">
+              <MappingFragment StoreEntitySet="CX_NEWS_Class">
+                <ScalarProperty Name="CX_NEWS_Class_id" ColumnName="CX_NEWS_Class_id" />
+                <ScalarProperty Name="CX_NEWS_Class_Name" ColumnName="CX_NEWS_Class_Name" />
+                <ScalarProperty Name="CX_Column_id" ColumnName="CX_Column_id" />
+                <ScalarProperty Name="CX_NEWS_Class_Explier" ColumnName="CX_NEWS_Class_Explier" />
+                <ScalarProperty Name="CX_NEWS_Class_Itemplitate_Address" ColumnName="CX_NEWS_Class_Itemplitate_Address" />
+                <ScalarProperty Name="CX_NEWS_Class_Itemplitate_Parame" ColumnName="CX_NEWS_Class_Itemplitate_Parame" />
+                <ScalarProperty Name="CX_NEWS_Class_Pic" ColumnName="CX_NEWS_Class_Pic" />
+                <ScalarProperty Name="CX_NEWS_Class_CreateFielfront" ColumnName="CX_NEWS_Class_CreateFielfront" />
+                <ScalarProperty Name="CX_NEWS_Class_Directory" ColumnName="CX_NEWS_Class_Directory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TreeClass">
+            <EntityTypeMapping TypeName="YuXiuModel.TreeClass">
+              <MappingFragment StoreEntitySet="TreeClass">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="followid" ColumnName="followid" />
+                <ScalarProperty Name="SortNum" ColumnName="SortNum" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="intro" ColumnName="intro" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Use">
+            <EntityTypeMapping TypeName="YuXiuModel.Use">
+              <MappingFragment StoreEntitySet="Use">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="Use_id" ColumnName="Use_id" />
+                <ScalarProperty Name="flg" ColumnName="flg" />
+                <ScalarProperty Name="UseName" ColumnName="UseName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Skybot.YuXiu">
+        <EntityTypeShape EntityType="YuXiuModel.CX_Collect" Width="1.5" PointX="0.75" PointY="0.75" Height="3.3071704101562496" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_Collect_Class" Width="1.5" PointX="2.75" PointY="0.75" Height="5.7904264322916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_Collect_Replace" Width="1.5" PointX="4.75" PointY="0.75" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_Column" Width="1.5" PointX="4.75" PointY="3.75" Height="3.3071704101562496" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_FAQonLine" Width="1.5" PointX="6.75" PointY="0.75" Height="3.1161507161458335" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_Gbook" Width="1.5" PointX="6.75" PointY="4.75" Height="4.2622688802083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.Cx_keyWord" Width="1.5" PointX="0.75" PointY="7.75" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_keyWord_Class" Width="1.5" PointX="8.75" PointY="0.75" Height="1.3969734700520817" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_link" Width="1.5" PointX="2.75" PointY="8.75" Height="2.5430916341145817" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_loginState" Width="1.5" PointX="8.75" PointY="3.75" Height="1.9700325520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_NEWS" Width="1.5" PointX="8.75" PointY="6.75" Height="4.0712491861979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.CX_NEWS_Class" Width="1.5" PointX="10.75" PointY="0.75" Height="2.7341113281250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.TreeClass" Width="1.5" PointX="10.75" PointY="4.75" Height="2.1610522460937531" IsExpanded="true" />
+        <EntityTypeShape EntityType="YuXiuModel.Use" Width="1.5" PointX="4.75" PointY="10.75" Height="1.9700325520833388" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32998AA1-3303-4BF1-83AE-349FCC2E9B3D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TygModel</RootNamespace>
+    <AssemblyName>采集应用程序</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Web\Bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\Bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSXML2">
+      <HintPath>..\Web\Bin\Interop.MSXML2.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NUniversalCharDet">
+      <HintPath>..\Web\Bin\NUniversalCharDet.dll</HintPath>
+    </Reference>
+    <Reference Include="SgmlReaderDll">
+      <HintPath>..\Web\Bin\SgmlReaderDll.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Capability\52xs\BookInfo52xs_com.cs" />
+    <Compile Include="Capability\52xs\BookList52xs_com.cs" />
+    <Compile Include="Capability\52xs\UpdateBookIndexFrom52xs_com.cs" />
+    <Compile Include="Capability\52xs\UpdateTop50SourceFromBaiduCollectSourceBy86zw.cs" />
+    <Compile Include="Capability\CommandCollection.cs" />
+    <Compile Include="Capability\UDPGroup.cs" />
+    <Compile Include="Capability\UpdateBookIndexFrom86zw_com.cs" />
+    <Compile Include="Capability\UrlExtentEntity.cs" />
+    <Compile Include="Capability\UpdateBookIndexFromdawenxue_org.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Analyse\ExpressionEntity.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Analyse\PathEneity.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Search\BingSearchCompare.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\BookListdawenxue_org.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\BookInfodawenxue_org.cs" />
+    <Compile Include="CreateBookHTML.cs" />
+    <Compile Include="MainWindowModel.cs" />
+    <Compile Include="Code\TabBookEnityExpandMethod.cs" />
+    <Compile Include="NewDocItem.cs" />
+    <Compile Include="TygModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TygModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ValueConvert.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Capability\UpdateTop50SourceFromBaiduCollectSourceBy86zw.cs" />
+    <Compile Include="Code\ITabEnity.cs" />
+    <Compile Include="Code\RecordsCacheManager.cs" />
+    <Compile Include="Code\RecordType.cs" />
+    <Compile Include="Code\Skybot.Tong\Check\Check.cs" />
+    <Compile Include="Code\Skybot.Tong\CodeCharSet\CodeCharSet.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Analyse\IAnalyse.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Analyse\SingleListPageAnalyse.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Analyse\SiteAnalyse\yankuai.comListPageAnalyse.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Analyse\XMLDocuentAnalyse.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Content\IDocumnetContent.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Content\PageListContent.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Content\PicContent.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Content\TextContent.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\GetDocuemntWorkAnsycCompleteEventArgs.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\GetHttpContentHepler.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\IGetDocuemnt.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Search\BaiduSearchCompare.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Search\ISearchCompare.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Search\SearchCompareEventArgs.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\AbstractBookInfo.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\AbstractBookList.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\BookInfo86zw_com.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\BookInfoYankuaikan_com.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\Sites\BookList86zw_com.cs" />
+    <Compile Include="Code\Skybot.Tong\Collections\StoryGetDocument.cs" />
+    <Compile Include="Code\Skybot.Tong\Data\DataOperTable.cs" />
+    <Compile Include="Code\Skybot.Tong\Data\DataOperTableForDataKeyAutoCreate.cs" />
+    <Compile Include="Code\Skybot.Tong\Data\IDataBaseTable.cs" />
+    <Compile Include="Code\Skybot.Tong\Data\IDataQueryTable.cs" />
+    <Compile Include="Code\Skybot.Tong\Data\TongSqlProcedure.cs" />
+    <Compile Include="Code\Skybot.Tong\Data\TongTreeDataTable.cs" />
+    <Compile Include="Code\Skybot.Tong\FY\Fy.cs" />
+    <Compile Include="Code\Skybot.Tong\JS_Prompt.cs" />
+    <Compile Include="Code\Skybot.Tong\Serialize\Serialize.cs" />
+    <Compile Include="Code\Skybot.Tong\StringEx.cs" />
+    <Compile Include="Code\Skybot.Tong\TongUse.cs" />
+    <Compile Include="Code\Skybot.Tong\UpFile\UpFile.cs" />
+    <Compile Include="Code\Skybot.Tong\UrlReWrite.cs" />
+    <Compile Include="Code\Skybot.Tong\WorkXml.cs" />
+    <Compile Include="Code\Skybot.Tong\XmlHttp.cs" />
+    <Compile Include="Code\Skybot.Tong\ZIP\Compression.cs" />
+    <Compile Include="Code\TabBookEntity.cs" />
+    <Compile Include="Code\TabClassEntity.cs" />
+    <Compile Include="Code\TabPageEntity.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Code\ClassDiagram.cd" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\Entities.datasource" />
+    <None Include="Properties\DataSources\TygModel.Entities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <EntityDeploy Include="TygModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TygModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Code\Skybot.Tong\Collections\Analyse\SiteAnalyse\网站小说目录列表分析.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Capability\这里存放功能.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Code\Skybot.Tong\Cache\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CheckSectionNo.aspx.cs" Inherits="Admin_Process_CheckSectionNo" %>

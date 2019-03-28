@@ -1,0 +1,2 @@
+﻿//document.writeln("<script type='text/javascript'>/*234*60，创建于2011-8-19*/ var cpro_id = 'u580932';</script><script src='http://cpro.baidu.com/cpro/ui/c.js' type='text/javascript'></script>");
+document.writeln("<script type='text/javascript'>/*120*270，xkzw首页、目录页对联*/ var cpro_id = 'u777184';</script><script src='http://cpro.baidu.com/cpro/ui/f.js' type='text/javascript'></script>");

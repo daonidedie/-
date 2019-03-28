@@ -1,0 +1,44 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+
+
+select *
+from [文章表] t
+where (select count(*) from [文章表] where [GUID]=t.[GUID] and 创建时间 > t.创建时间 )<3
+ORDER BY 创建时间
+
+
+  SELECT id,创建时间 FROM [文章表]  where [GUID] in (select top 50 [GUID] from 书名表 order by 最后更新时间 desc )  
+
+ select d.* from (
+  select top 50 [GUID] from 书名表 order by 最后更新时间 desc 
+ ) as
+ doctype
+ left join 
+ (
+    SELECT top 1 *  from  文章表 order by 文章表.创建时间 desc 
+ )
+ d
+ on d.[GUID]=doctype.[GUID] 
+
+ SELECT *
+FROM
+(
+   SELECT rid=ROW_NUMBER() OVER(PARTITION BY [GUID] ORDER BY Date DESC),*
+   FROM 文章表
+) AS T
+WHERE rid<=2
+
+select d.ID,d.本记录GUID,d.GUID,d.书名 into #doc  from (
+  select top 50 [GUID] from 书名表 where   书名表.完本='false' order by 最后更新时间 desc 
+ ) as
+ doctype
+ left join 
+ (
+    SELECT *  from  文章表 
+ )
+ d
+ on d.[GUID]=doctype.[GUID] 
+
+select * from (select *,row=row_number()over(partition by [GUID] order by ID desc) from #doc)t where row=1 and t.id>0
+
+drop table #doc

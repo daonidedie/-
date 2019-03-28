@@ -1,0 +1,293 @@
+﻿html, body
+{
+	text-align: center;
+	font-size: 12px;
+	margin: 0px;
+	font-family: 宋体,Courier New;
+	color: Black;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:link
+{
+	color: Black;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+a:visited
+{
+	color: Black;
+}
+
+#index
+{
+	width: 950px;
+	text-align: center;
+}
+
+#main
+{
+	width: 950px;
+}
+
+#header
+{
+	width: 948px;
+	height: 110px;
+	border: 1px solid #CCCCCC;
+}
+
+#userwid
+{
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#EBEBEB',endColorStr='#FAFAFA');
+	height: 39px;
+	line-height: 39px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	width: 948px;
+}
+
+#foot
+{
+	width: 948px;
+	height: 110px;
+	border: 1px solid #CCCCCC;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#EBEBEB',endColorStr='#FFFFFF');
+}
+
+#serch
+{
+	width: 948px;
+	height: 40px;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 5px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+}
+
+#boostype
+{
+	margin-bottom: 5px;
+	border: 1px solid #CCCCCC;
+	width: 948px;
+	height: 20px;
+	padding-top: 10px;
+	text-align: left;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+	color: black;
+	border-top: 0px;
+}
+
+#txSerch
+{
+	width: 100px;
+	height: 12px;
+}
+
+#left
+{
+	width: 250px;
+	float: left;
+	border: 1px solid #CCCCCC;
+	height: 300px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+}
+
+#right
+{
+	width: 695px;
+	float: right;
+	border: 1px solid #CCCCCC;
+	height: 300px;
+	margin-bottom: 5px;
+}
+
+#clickBook
+{
+	width: 250px;
+	float: left;
+	border: 1px solid #CCCCCC;
+	height: 435px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+}
+
+#booknews
+{
+	width: 695px;
+	float: right;
+	border: 1px solid #CCCCCC;
+	height: 435px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+}
+
+#guanggao
+{
+	clear: both;
+	width: 948px;
+	height: 71px;
+	border: 1px solid #CCCCCC;
+	text-align: left;
+}
+
+
+#newbook
+{
+	clear: both;
+	height: 655px;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 5px;
+	
+}
+
+#visitAuthor
+{
+	float: right;
+	width: 695px;
+	height: 380px;
+	border: 1px solid #CCCCCC;
+	text-align: left;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+}
+
+
+#ticket
+{
+	float: left;
+	width: 250px;
+	height: 380px;
+	border: 1px solid #CCCCCC;
+	margin-bottom: 5px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+}
+
+#Div_login
+{
+	height: 30px;
+	margin-bottom: 5px;
+	text-align: right;
+	line-height: 30px;
+	border: 1px solid #CCCCCC;
+	border-top:0px;
+}
+
+
+#Div_userPanel
+{
+	height: 40px;
+	margin-bottom: 5px;
+	text-align: right;
+	line-height: 35px;
+	border: 1px solid #CCCCCC;
+	padding-left: 5px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FAFAFA',endColorStr='#EBEBEB');
+	border-top:0px;
+}
+
+.title
+{
+	height: 25px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FAFAFA',endColorStr='#EBEBEB');
+	line-height: 25px;
+	text-align: center;
+}
+
+
+#tagContent0
+{
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+	width:673px;
+}
+
+
+#tagContent1
+{
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#FAFAFA');
+	width:673px;
+}
+
+.itemsCss
+{
+	border-bottom: 1px dotted #CCCCCC;
+	text-align: right;
+}
+
+.itemsleftcss
+{
+	border-bottom: 1px dotted #CCCCCC;
+	text-align: left;
+	width: 500px;
+	height: 21px;
+}
+
+#Div1
+{
+	height: 200px;
+	width: 229px;
+	border: solid 1px #DDD;
+	margin-top: 5px;
+	float: left;
+	margin-left: 5px;
+}
+
+#imags
+{
+	float: left;
+	margin-left: 10px;
+	border: solid 1px #BBB;
+}
+
+
+.propfontbottom
+{
+	border:0px;
+	height:22px;
+	border-bottom:1px dotted #CCCCCC;
+	text-align:left;
+	
+}
+
+.propfontleft
+{
+	border:0px;
+	border-bottom:1px dotted #CCCCCC;
+	text-align:left;
+}
+
+.myth
+{
+	line-height:40px;border-bottom:1px solid #CCCCCC;height:40px;
+}
+
+#ifocus { width:524px; height:270px; border:1px solid #D6D6D6;float:left;margin-bottom:5px;margin-left:5px;margin-right:5px;}
+	#ifocus_pic { display:inline; position:relative; float:left; width:170px; height:240px; overflow:hidden;margin:10px;margin-top:16px;margin-left:12px; border:1px solid #DDD; }
+		#ifocus_piclist { position:absolute; float:left;}
+		#ifocus_piclist img { width:170px; height:250px;margin-left:-40px; border:0px;}
+	#ifocus_btn { display:inline; float:left; margin-top:-2px;height:242px;}
+		#ifocus_btn img { width:60px; height:57px; margin-left:-40px;margin-top:5px;}
+#bookText{float:left;height:242px;width:250px;margin-top:5px;}
+ul, li { list-style:none; }
+#bookText_1{width:250px;height:52px;float:left;padding-left:5px;text-align:left;margin-top:5px;padding-top:5px;}
+#ul1{float:left;margin-left:0px;}
+
+#allbook
+{
+	
+}
+
+#bookselect
+{
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='#FFFFFF',endColorStr='#EBEBEB');
+	border: 1px solid #CCCCCC;
+	margin-bottom:5px;
+}

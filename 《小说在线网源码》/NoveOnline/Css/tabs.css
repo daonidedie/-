@@ -1,0 +1,53 @@
+﻿OL LI {
+	MARGIN: 8px
+}
+#con {
+	FONT-SIZE: 12px; MARGIN: 0px auto; WIDTH: 695px;
+	FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType='0',startColorStr='white',endColorStr='black');
+	
+}
+#tags {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 10px; WIDTH: 695px; PADDING-TOP: 0px; HEIGHT: 25px
+	
+}
+#tags LI {
+	FLOAT: left; MARGIN-RIGHT: 1px; LIST-STYLE-TYPE: none; HEIGHT: 23px
+}
+#tags LI A {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 20px; BACKGROUND: url("../Images/tab/tagright.gif") no-repeat right bottom; 
+	FLOAT: left; PADDING-BOTTOM: 0px; COLOR: #999;LINE-HEIGHT: 23px; PADDING-TOP: 0px; HEIGHT: 23px; TEXT-DECORATION: none
+}
+#tags LI.emptyTag {
+	BACKGROUND: none transparent scroll repeat 0% 0%; WIDTH: 4px
+}
+#tags LI.selectTag {
+	BACKGROUND-POSITION: left top; MARGIN-BOTTOM: -2px; POSITION: relative; HEIGHT: 25px
+}
+#tags LI.selectTag A {
+	BACKGROUND-POSITION: right top; COLOR: #000; LINE-HEIGHT: 25px; HEIGHT: 25px
+}
+#tagContent {
+   PADDING-BOTTOM: 1px; PADDING-TOP:0px; BACKGROUND-COLOR: #fff
+}
+.tagContent {
+PADDING-RIGHT: 10px; DISPLAY: none; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; WIDTH: 690px; COLOR: #474747; PADDING-TOP: 0px; HEIGHT: 250px
+}
+#tagContent DIV.selectTag {
+DISPLAY: block
+}
+
+#tagContent1
+{
+	text-align:left;
+	
+	height:259px;
+}
+
+
+
+#tagContent0
+{
+	text-align:left;
+	
+	height:259px;
+}

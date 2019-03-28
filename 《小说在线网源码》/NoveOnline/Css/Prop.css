@@ -1,0 +1,49 @@
+﻿
+#Propleft
+{
+	width:247px;
+	float:left;
+	
+}
+
+#Propright
+{
+	width:695px;float:right;
+	margin-bottom:5px;
+}
+
+#PropType
+{
+	clear:both;
+	height:220px;
+	border:1px solid #CCCCCC;
+}
+
+#propTOP
+{
+	height:317px;
+	border:1px solid #CCCCCC;
+	padding-left:20px;
+}
+
+#PropList
+{
+	border:1px solid #CCCCCC;
+	
+}
+
+.fontleft
+{
+	text-align:left;
+	border:0px;
+	border-bottom:1px dotted #DDD;
+
+}
+
+.fontbottom
+{
+	height:25px;
+	line-height:20px;
+	border:0px;
+	border-bottom:1px dotted #DDD;
+}

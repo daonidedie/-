@@ -1,0 +1,533 @@
+* {
+	margin: 0px auto; padding: 0px; font-size: 12px; font-weight: normal; list-style-type: none;
+}
+html {
+	margin: auto; padding: 0px; text-align: center; background-color: rgb(255, 255, 255);
+}
+body {
+	margin: auto; padding: 0px; text-align: center; background-color: rgb(255, 255, 255);
+}
+#container {
+	margin: auto; width: 100%; height: 100%; padding-top: 0px;
+}
+.clear {
+	clear: both; font-size: 0px;
+}
+.center {
+	margin: 0px auto;
+}
+.w890 {
+	width: 890px; position: relative;
+}
+.mt1 {
+	margin-top: 10px;
+}
+.title {
+	color: rgb(68, 68, 68); font-size: 14px;
+}
+.title a {
+	font-size: 14px;
+}
+img {
+	border: 0px currentColor;
+}
+.fc_03c {
+	color: rgb(0, 51, 204); font-size: 14px;
+}
+a {
+	color: rgb(51, 102, 204); text-decoration: none;
+}
+a:hover {
+	color: rgb(255, 51, 51); text-decoration: underline;
+}
+#book_header {
+	width: 890px;
+}
+#book_topimg {
+	width: 100%;
+}
+#book_topbg {
+	margin: 0px auto; width: 890px; height: 90px;
+}
+#book_logo {
+	background: url("../images/book_logo.gif") no-repeat; width: 290px; height: 70px; margin-top: 5px; margin-left: 5px; float: left;
+}
+#baidu_pro {
+	width: 585px; height: 90px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
+}
+#book_menubg
+{
+    width: 890px;
+    height: 30px;
+    margin-bottom: 2px;
+    background-color: #00CC99;
+}
+#book_menu {
+	margin: 0px auto 0px 15px; height: 30px; color: rgb(196, 196, 196); line-height: 30px;
+}
+#book_menu ul {
+	list-style: none;
+}
+#book_menu li {
+	height: 30px; text-align: center; line-height: 30px; font-size: 14px; float: left;
+}
+#book_menu li.fenge {
+	background: url("../images/rs_hz_119.gif") no-repeat 0px 0px; width: 2px; height: 30px; overflow: hidden; float: left;
+}
+#book_menu li a {
+	padding: 0px 12px; height: 30px; color: rgb(255, 255, 255); line-height: 30px; font-size: 14px; font-weight: bold; text-decoration: none; display: inline-block;
+}
+#book_menu li a:hover
+{
+    height: 30px;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    background-color: #00FFff;
+}
+#book_go {
+	background: url("../images/book_go.gif") no-repeat; width: 16px; height: 16px; margin-top: 7px; margin-left: 5px; float: left;
+}
+#main {
+	background: url("../images/book_mainbg.gif") repeat-x; margin: 0px auto; width: 890px; text-align: center;
+}
+#mains {
+	background: url("../images/book_mainbg.gif") repeat-x; margin: 0px auto; width: 1060px; text-align: center;
+}
+.header .search_l {
+	background: url("../images/search_l.gif") no-repeat bottom; width: 5px; height: 33px; float: left;
+}
+.header .search_r {
+	background: url("../images/search_r.gif") no-repeat bottom; width: 5px; height: 33px; float: right;
+}
+.header .search {
+	background: url("../images/search_bg.gif") repeat-x bottom; height: 33px; clear: both; margin-top: -2px;
+}
+.header .search .form {
+	width: 370px; padding-top: 3px; padding-left: 8px; float: left;
+}
+.header .search .form h4 {
+	display: none;
+}
+.header .search .form input.search-keyword {
+	background: url("../images/search-bg.gif") no-repeat left top; padding: 5px 3px 0px 58px; border: currentColor; width: 124px; height: 18px; line-height: 15px; overflow: hidden; font-size: 12px;
+}
+.header .search .form select.search-option {
+	margin-left: 2px;
+}
+.header .search .form button.search-submit {
+	background: url("../images/search-bg.gif") no-repeat right top rgb(255, 0, 0); border: currentColor; width: 68px; height: 22px; line-height: 100px; overflow: hidden; font-size: 0px; margin-left: 2px;
+}
+.header .tags {
+	width: 206px; padding-top: 6px; margin-left: 10px; float: left;
+}
+.header .tags h4 {
+	background: url("../images/search-tags-title.gif") no-repeat; width: 66px; height: 19px; line-height: 100px; overflow: hidden; font-size: 0px; float: left;
+}
+.header .tags ul {
+	width: 140px; height: 21px; overflow: hidden; float: left;
+}
+.header .tags ul li {
+	padding: 0px 2px; color: rgb(63, 144, 174); line-height: 19px; float: left;
+}
+.header .tags ul li a {
+	color: rgb(63, 144, 174);
+}
+.header .sitemap a {
+	color: rgb(63, 144, 174); padding-top: 10px; margin-right: 5px; float: right;
+}
+#book_main {
+	margin: 0px auto; width: 890px;
+}
+.book_news {
+	border: 1px solid rgb(202, 202, 202); width: 888px; margin-top: 0px;
+}
+.book_news_title {
+	width: 888px; height: 35px; text-align: left; background-color: rgb(239, 239, 239);
+}
+.book_news_title ul {
+	list-style: none;
+}
+.book_news_title li {
+	background: url("../images/book_news.gif") no-repeat 10px 6px; height: 35px; color: rgb(68, 68, 68); line-height: 35px; text-indent: 40px; font-size: 14px;
+}
+.book_news_style {
+	padding: 10px 0px 0px 10px; width: 848px;
+}
+.book_news_style_form {
+	width: 422px; height: 160px; text-align: left; margin-bottom: 15px; float: left; display: inline-block;
+}
+.book_news_style_img {
+	background: url("../images/bg001.gif") no-repeat 0px -64px; width: 130px; float: left;
+}
+.book_news_style_img img {
+	margin: 3px 0px 0px 3px; width: 120px; height: 150px;
+}
+.book_news_style_text {
+	width: 240px; overflow: hidden; padding-left: 10px; float: left;
+}
+.book_news_style_text h1 {
+	color: rgb(183, 0, 0); line-height: 20px; font-size: 14px; font-weight: bold;
+}
+.book_news_style_text h1 a {
+	color: rgb(183, 0, 0); line-height: 20px; font-size: 14px; font-weight: bold; text-decoration: none;
+}
+.book_news_style_text h1 a:hover {
+	color: rgb(68, 68, 68);
+}
+.book_news_style_text h2 {
+	line-height: 20px;
+}
+.book_news_style_text h2 a {
+	color: rgb(68, 68, 68); line-height: 20px; text-decoration: none;
+}
+.book_news_style_text h3 {
+	color: rgb(68, 68, 68); line-height: 20px; padding-top: 5px; text-decoration: none; border-top-color: rgb(190, 190, 190); border-top-width: 1px; border-top-style: dotted;
+}
+.listbox {
+	width: 890px; overflow: hidden; clear: both; margin-bottom: 10px;
+}
+.listbox dl {
+	width: 437px; margin-top: 10px; float: left;
+}
+.listbox dl ul {
+	height: 160px;
+}
+.listbox ul a {
+	color: rgb(119, 119, 119); font-size: 14px;
+}
+.tbox {
+	width: 890px; overflow: hidden; margin-right: 16px; border-bottom-color: rgb(223, 223, 223); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.tbox dt {
+	background: url("../images/mbox-tbg.png") no-repeat right top; height: 33px; overflow: hidden; clear: both;
+}
+.tbox dt strong {
+	background: url("../images/mbox-tbg.png") no-repeat left top; height: 33px; color: rgb(94, 168, 5); line-height: 33px; letter-spacing: 1px; padding-right: 4px; padding-left: 10px; font-size: 14px; float: left; display: block;
+}
+.tbox dd {
+	padding: 2px 4px 4px; overflow: hidden; border-right-color: rgb(223, 223, 223); border-left-color: rgb(223, 223, 223); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+.tbox li {
+	text-align: left;
+}
+.rbox {
+	width: 890px; overflow: hidden; border-bottom-color: rgb(223, 223, 223); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.rbox dt {
+	background: url("../images/mbox-tbg.png") no-repeat right top; height: 33px; overflow: hidden; clear: both;
+}
+.rbox dt strong {
+	background: url("../images/mbox-tbg.png") no-repeat left top; height: 33px; color: rgb(94, 168, 5); line-height: 33px; letter-spacing: 1px; padding-right: 4px; padding-left: 10px; font-size: 14px; float: left; display: block;
+}
+.rbox dd {
+	padding: 2px 4px 4px; overflow: hidden; border-right-color: rgb(223, 223, 223); border-left-color: rgb(223, 223, 223); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+.rbox li {
+	text-align: left;
+}
+.d1 {
+	padding: 4px 0px;
+}
+.d1 li {
+	height: 27px; line-height: 27px; overflow: hidden;
+}
+.d1 li span {
+	color: rgb(153, 153, 153); margin-right: 5px; float: right;
+}
+.date {
+	font-size: 14px;
+}
+.ico3 li {
+	background: url("../images/ico-3.gif") no-repeat 7px 9px; padding-left: 16px;
+}
+.pagen a {
+	padding: 0px 5px; line-height: 20px; text-decoration: none; display: block;
+}
+.pagen a:hover {
+	background: url("../images/fanyebgoff.gif") left bottom; color: rgb(255, 255, 255);
+}
+.pagen a:active {
+	background: url("../images/fanyebgoff.gif") left bottom; color: rgb(255, 255, 255);
+}
+.pagen li.disabled a:hover {
+	background: url("../images/fanyebg.gif") left bottom; padding: 0px 5px; color: rgb(74, 74, 74); text-decoration: none;
+}
+.pagen ul {
+	text-align: left; padding-left: 40px; list-style-type: none;
+}
+.pagen li {
+	background: url("../images/fanyebg.gif") left bottom; border: 1px solid rgb(120, 194, 37); text-align: left; color: rgb(255, 255, 255); line-height: 20px; margin-right: 2px; float: left;
+}
+.pagen li.current {
+	background: url("../images/fanyebgoff.gif") left bottom; padding: 0px 5px; border: 1px solid rgb(120, 194, 37); font-weight: bold;
+}
+.pagen li.disabled {
+	border: 1px solid rgb(205, 228, 247); font-weight: bold; margin-right: 2px;
+}
+#fanye {
+	background: rgb(249, 249, 249); padding: 6px 8px; height: 24px; overflow: hidden; font-family: Arial, Helvetica, sans-serif; border-top-color: rgb(226, 226, 226); border-top-width: 1px; border-top-style: solid;
+}
+#fanye .fanyetxt {
+	padding: 0px 0px 0px 3px; float: left;
+}
+#fanye .pagen {
+	text-align: right; float: right;
+}
+.book_news_title {
+	height: 35px; text-align: left; background-color: rgb(239, 239, 239);
+}
+.book_news_title ul {
+	list-style: none;
+}
+.book_news_title li {
+	background: url("../images/book_news.gif") no-repeat 10px 6px; height: 35px; color: rgb(68, 68, 68); line-height: 35px; text-indent: 40px; font-size: 14px; font-weight: bold;
+}
+.book_news_style_form1 {
+	width: 600px; text-align: left; margin-top: 0px; margin-bottom: 10px; margin-left: 0px; float: left;
+}
+.book_news_style_img1 {
+	width: 150px; height: 150px; margin-top: 10px; margin-left: 0px; float: left;
+}
+.book_news_style_img1 img {
+	padding: 3px; border: 1px dotted rgb(143, 143, 143); width: 130px; height: 150px;
+}
+.book_news_style_text2 {
+	width: 610px; overflow: hidden; padding-top: 4px; padding-left: 26px; float: left;
+}
+.book_news_style_text2 .yin_1 {
+	background: url("../images/001.gif") no-repeat; width: 148px; height: 88px; right: 250px; margin-top: -40px; float: right; position: absolute; index: 1;
+}
+.book_news_style_text2 .yin_2 {
+	background: url("../images/002.gif") no-repeat; width: 148px; height: 88px; right: 250px; margin-top: -40px; float: right; position: absolute; index: 1;
+}
+.book_news_style_text2 .yin_3 {
+	background: url("../images/003.gif") no-repeat; width: 148px; height: 88px; right: 250px; margin-top: -40px; float: right; position: absolute; index: 1;
+}
+.book_news_style_text2 h1 {
+	color: rgb(68, 68, 68); font-size: 15px; font-weight: bold;
+}
+.book_news_style_text2 h1 a {
+	color: rgb(183, 0, 0); line-height: 20px; font-size: 13px; font-weight: bold; text-decoration: none;
+}
+.book_news_style_text2 h2 {
+	width: 600px; height: 16px; color: rgb(68, 68, 68); overflow: hidden; margin-top: 5px; margin-bottom: 5px; float: left;
+}
+.book_news_style_text2 h2 a {
+	color: rgb(183, 0, 0);
+}
+.book_news_style_text2 h3 {
+	width: 600px; color: rgb(68, 68, 68); line-height: 20px; padding-top: 5px; text-decoration: none; border-top-color: rgb(190, 190, 190); border-top-width: 1px; border-top-style: dotted; float: left;
+}
+.book_news_style_text2 h4 {
+	width: 250px; height: 16px; color: rgb(68, 68, 68); overflow: hidden; margin-top: 5px; margin-bottom: 5px; float: left;
+}
+.msgarea {
+	width: 505px; text-align: left; line-height: 20px; padding-left: 26px; margin-top: 10px; float: left; overflow-y: auto; scrollbar-face-color: rgb(255, 255, 255); scrollbar-3dlight-color: rgb(255, 255, 255); scrollbar-shadow-color: rgb(145, 145, 146); scrollbar-highlight-color: rgb(145, 145, 146); scrollbar-darkshadow-color: rgb(255, 255, 255); scrollbar-arrow-color: rgb(145, 145, 146); scrollbar-track-color: rgb(255, 255, 255);
+}
+.book_article_title {
+	width: 610px; height: 25px; color: rgb(143, 143, 143); line-height: 25px; text-indent: 10px; padding-left: 0px; margin-top: 5px; margin-left: 26px; float: left; background-color: rgb(241, 241, 241);
+}
+.book_article_listtable {
+	width: 826px; height: 30px; text-align: left; line-height: 30px; text-indent: 10px; font-size: 14px; border-top-color: rgb(223, 223, 223); border-top-width: 1px; border-top-style: dotted; background-color: rgb(248, 248, 248);
+}
+.book_article_texttable {
+	margin: 10px auto 20px; width: 826px;
+}
+.book_article_texttitle {
+	width: 826px; height: 30px; color: rgb(68, 68, 68); line-height: 30px; font-size: 14px; font-weight: bold; background-color: rgb(241, 241, 241);
+}
+.book_article_texttitle a {
+	color: rgb(68, 68, 68); font-weight: bold; text-decoration: none;
+}
+.book_article_listtext {
+	width: 826px; text-align: left; color: rgb(68, 68, 68); line-height: 20px; padding-left: 8px;
+}
+#chapterlist dd {
+	margin: 0px; padding: 10px 0px 0px; width: 270px; height: 20px; overflow: hidden; float: left;
+}
+#chapterlist dd a {
+	color: rgb(68, 68, 68); font-size: 14px; text-decoration: none;
+}
+#chapterlist dd a:hover {
+	color: rgb(255, 114, 174); font-size: 14px; text-decoration: none;
+}
+.book_listpage {
+	border: 1px solid rgb(202, 202, 202); width: 890px; height: 50px; color: rgb(68, 68, 68); line-height: 50px; margin-top: 10px; background-color: rgb(241, 241, 241);
+}
+.list_page {
+	padding: 15px 0px 15px 100px;
+}
+.list_page span {
+	background: rgb(255, 255, 255); padding: 0px 6px; border: 1px solid rgb(208, 208, 208); height: 20px; color: rgb(0, 0, 0); line-height: 20px; margin-right: 5px; float: left; display: block;
+}
+.list_page b {
+	background: rgb(255, 255, 255); padding: 0px 6px; border: 1px solid rgb(208, 208, 208); height: 20px; color: rgb(0, 0, 0); line-height: 20px; margin-right: 5px; float: left; display: block;
+}
+.list_page a {
+	background: rgb(255, 255, 255); padding: 0px 6px; border: 1px solid rgb(208, 208, 208); height: 20px; color: rgb(0, 0, 0); line-height: 20px; margin-right: 5px; float: left; display: block;
+}
+.list_page a:hover {
+	background: rgb(241, 241, 249); text-decoration: none;
+}
+.list_page a.active {
+	background: rgb(241, 241, 249); border: 1px solid rgb(208, 208, 208); color: rgb(255, 102, 0); font-weight: bold;
+}
+.list_page .disable {
+	background: rgb(238, 238, 238); color: rgb(153, 153, 153);
+}
+#book_middle {
+	margin: 8px auto 0px; width: 1060px;
+}
+.book_middle_article {
+	border: 1px solid rgb(202, 202, 202); width: 1052px; margin-bottom: 10px;
+}
+.book_middle_title {
+	background: url("../images/gif_57_030.gif") no-repeat 10px 10px rgb(239, 239, 239); border: 1px solid rgb(255, 255, 255); width: 1050px; height: 35px; text-align: left; color: rgb(153, 153, 153); line-height: 37px; text-indent: 35px; font-size: 14px;
+}
+.book_middle_title a {
+	color: rgb(153, 153, 153); font-size: 14px; text-decoration: none;
+}
+.book_middle_title a:hover {
+	color: rgb(238, 0, 0); font-size: 14px;
+}
+.book_middle_title span {
+	padding-right: 10px; font-size: 14px; float: right;
+}
+.book_middle_text {
+	padding: 20px; width: 1010px; background-color: rgb(250, 250, 250);
+}
+.book_middle_text .adtext {
+	padding-top: 16px; padding-bottom: 10px;
+}
+.book_middle_text dt {
+	color: rgb(68, 68, 68); line-height: 320%; font-size: 30px; font-weight: bold;
+}
+.book_middle_text .sdt {
+	color: rgb(68, 68, 68); line-height: 320%; border-bottom-color: rgb(202, 202, 202); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.book_middle_text dd {
+	text-align: left; color: rgb(68, 68, 68); line-height: 25px; font-size: 14px; margin-top: 16px; margin-bottom: 10px;
+}
+.book_middle_text dd #booktext {
+	padding: 10px 3%; font-size: 16px;
+}
+.book_middle_text dd p {
+	padding: 10px 3%; font-size: 16px;
+}
+.book_middle_text_next {
+	border: 1px solid rgb(202, 202, 202); width: 1052px; height: 30px; color: rgb(68, 68, 68); line-height: 30px; font-size: 14px; margin-bottom: 2px;
+}
+.book_middle_text_next_adin {
+	border: 1px solid rgb(202, 202, 202); width: 1050px; margin-top: 0px; margin-bottom: 0px;
+}
+.book_middle_text_next_adout {
+	border: 1px solid rgb(202, 202, 202); width: 1052px; margin-top: 0px; margin-bottom: 2px;
+}
+.book_middle_text_next a {
+	color: rgb(68, 68, 68); font-size: 14px; text-decoration: none;
+}
+.book_middle_text_next a:hover {
+	color: rgb(255, 114, 174);
+}
+#TextSelect {
+	height: 44px; text-align: center; line-height: 44px; margin-top: 10px;
+}
+#TextSelect span {
+	height: 44px; margin-left: 10px; float: left; display: inline;
+}
+#TextSelect img {
+	margin-top: 11px; margin-left: 6px; float: left; display: inline;
+}
+.ts1 {
+	width: 280px; float: left; display: inline;
+}
+.ts2 {
+	width: 170px; float: left; display: inline;
+}
+.ts3 {
+	width: 160px; float: left; display: inline;
+}
+.ts4 {
+	width: 400px; float: right; display: inline;
+}
+.ts4 a {
+	color: rgb(68, 68, 68); font-size: 14px; text-decoration: none;
+}
+.ts4 a:hover {
+	color: rgb(255, 0, 0);
+}
+.linkbox {
+	width: 890px; overflow: hidden; border-bottom-color: rgb(223, 223, 223); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.linkbox dt {
+	background: url("../images/mbox-tbg.png") no-repeat right top; height: 33px; overflow: hidden; clear: both;
+}
+.linkbox dt strong {
+	background: url("../images/mbox-tbg.png") no-repeat left top; height: 33px; color: rgb(94, 168, 5); line-height: 33px; letter-spacing: 1px; padding-right: 4px; padding-left: 10px; font-size: 14px; float: left; display: block;
+}
+.linkbox dd {
+	padding: 2px 4px 4px; overflow: hidden; border-right-color: rgb(223, 223, 223); border-left-color: rgb(223, 223, 223); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+.linkbox li {
+	text-align: left;
+}
+.f5 {
+	margin: 0px auto; width: 100%; overflow: hidden; padding-bottom: 10px; padding-left: 3px; clear: both;
+}
+.f5 li {
+	padding: 8px 10px 0px; line-height: 14px; float: left; white-space: nowrap;
+}
+.f5 li a {
+	color: rgb(102, 102, 102); float: left;
+}
+.footer {
+	text-align: center; color: rgb(85, 85, 85); line-height: 18px; padding-top: 10px; padding-bottom: 30px; border-top-color: rgb(229, 239, 214); border-top-width: 1px; border-top-style: solid;
+}
+.footer .link {
+	padding: 5px 0px; text-align: center;
+}
+.footer .link a {
+	margin: 0px 5px; color: rgb(102, 102, 102);
+}
+.footer .powered {
+	line-height: 25px; font-size: 10px;
+}
+.footer .powered strong {
+	color: rgb(102, 153, 0);
+}
+.footer .powered strong span {
+	color: rgb(255, 153, 51);
+}
+.footer .copyright {
+	color: rgb(102, 102, 102); line-height: 23px;
+}
+.cookies {
+	border: 1px solid rgb(204, 204, 204); width: 890px; height: auto; margin-top: 5px; margin-right: auto; margin-left: auto;
+}
+.cookies_menu {
+	background: url("menu.gif") 0px -40px; width: 100%; height: 30px; text-align: left; line-height: 30px; text-indent: 20px; font-size: 13px; font-weight: bold; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.cookies dl {
+	width: 860px; height: 30px; margin-left: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.cookies dd {
+	height: 30px; line-height: 30px; overflow: hidden; float: left;
+}
+.cookBookname {
+	width: 130px; text-align: left;
+}
+.cookBookAuthor {
+	width: 100px; text-align: left;
+}
+.cookBookchapter {
+	width: 210px; text-align: left;
+}
+.cookBookchapter1 {
+	width: 210px; text-align: left;
+}
+.cookBooktime {
+	width: 100px; text-align: left;
+}
+.cookBookclear {
+	width: 60px; text-align: center;
+}

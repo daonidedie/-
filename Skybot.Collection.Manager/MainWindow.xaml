@@ -1,0 +1,35 @@
+﻿<Window x:Name="top50" x:Class="BaiduMapConvertManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="数据管理工具V1.0" Height="561" Width="857">
+    <Grid x:Name="updateTop50">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ListBox  ItemsSource="{Binding}"  Grid.Row="1" Grid.ColumnSpan="4" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="范围" ></TextBlock>
+                        <TextBlock Text="{Binding 范围}" ></TextBlock>
+                        <TextBlock Text="进度" ></TextBlock>
+                        <TextBlock Text="{Binding 状态}" ></TextBlock>
+                        <TextBlock Text="操作" ></TextBlock>
+                        <Button  Content="强制结束" Command="{Binding ButtonCommand}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="更新所有数据" Grid.Row="0" x:Name="button1" Click="button1_Click"  />
+        <Button x:Name="UpdateTop50" Content="更新前50" Grid.Column="1" Click="UpdateTop50_Click" />
+        <Button x:Name="CreateHtmlAndSiteMap" Content="生成最新" Grid.Column="2" Click="CreateHtmlAndSiteMap_Click" />
+        <Button x:Name="UpdateDataEveryday" Content="每天自动更新" Grid.Column="3" Click="UpdateDataEveryday_Click" />
+    </Grid>
+</Window>
